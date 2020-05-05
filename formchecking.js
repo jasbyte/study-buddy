@@ -60,6 +60,17 @@
 			else {
 				document.getElementById('qstEmail').classList.add('valid');
 			}
+			// check Wachtwoord
+			// check Postcode
+			if (qstPostcode.value == '') {
+				isValid = false;
+				errZip.innerHTML = 'gelieve een postcode in te vullen';	
+				errZip.style.display = 'block';
+				document.getElementById('qstPostcode').classList.add('invalid');
+			}
+			else {
+				document.getElementById('qstPostcode').classList.add('valid');
+			}
 			// check country
 			if (qstCountry.value == -1) {
 				isValid = false;
@@ -70,29 +81,6 @@
 			else {
 				document.getElementById('qstCountry').classList.add('valid');
 			}
-
-			// check street and number
-			if (qstStreet.value == '') {
-				isValid = false;
-				errStreet.innerHTML = 'gelieve een straat en nummer in te vullen';	
-				errStreet.style.display = 'block';
-				document.getElementById('qstStreet').classList.add('invalid');
-			}
-			else {
-				document.getElementById('qstStreet').classList.add('valid');
-			}
-
-			// check zip
-			if (qstZip.value == '') {
-				isValid = false;
-				errZip.innerHTML = 'gelieve een postcode in te vullen';	
-				errZip.style.display = 'block';
-				document.getElementById('qstZip').classList.add('invalid');
-			}
-			else {
-				document.getElementById('qstZip').classList.add('valid');
-			}
-
 			// check city
 			if (qstCity.value == '') {
 				isValid = false;
@@ -103,18 +91,35 @@
 			else {
 				document.getElementById('qstCity').classList.add('invalid');
 			}
-			// check if 2 zijn gechecked
-			if (document.querySelectorAll('.qstn7 input[type="checkbox"]:checked').length<2) {
+			// check street
+			if (qstStreet.value == '') {
 				isValid = false;
-				errInterests.innerHTML = 'gelieve 2 boxen aan te vullen';
-				errInterests.style.display = 'block';
+				errStreet.innerHTML = 'gelieve een straat in te vullen';	
+				errStreet.style.display = 'block';
+				document.getElementById('qstStreet').classList.add('invalid');
 			}
-
-			// check partner.. gechecked
-			if (document.querySelectorAll('.qstn8  input[type=radio]:checked'.length<1)) {
+			else {
+				document.getElementById('qstStreet').classList.add('valid');
+			}
+			// check number
+			if (qstNumber.value == '') {
 				isValid = false;
-				errShare.innerHTML = 'gelieve een van de twee aan te duiden';
-				errShare.style.display = 'block';
+				qstNumber.innerHTML = 'gelieve een nummer in te vullen';
+				qstNumber.style.display = 'block';
+				document.getElementById('qstNumber').classList.add('invalid');
+			}
+			else {
+				document.getElementById('qstCity').classList.add('invalid');
+			}
+			// check geboortedatum
+			if (qstGeboorteDatum.value == '') {
+				isValid = false;
+				qstGeboorteDatum.innerHTML = 'gelieve een van de twee aan te duiden';
+				qstGeboorteDatum.style.display = 'block';
+				document.getElementById('qstNumber').classList.add('invalid');
+			}
+			else {
+				document.getElementById('qstCity').classList.add('invalid');
 			}
 
 			// check gebruikersVoorwaarden gechecked
