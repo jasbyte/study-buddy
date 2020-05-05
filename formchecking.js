@@ -16,21 +16,21 @@
 			var isValid = true;
       
 			// error messages shortcuts
-      var errName = document.getElementById('errName');
-      var errEmail = document.getElementById('errEmail');
-      var errWachtwoord = document.getElementById('errWachtwoord');
-      var errPostcode = document.getElementById('errPostcode');
-      var errCity = document.getElementById('errCity');
+      			var errName = document.getElementById('errName');
+     			var errEmail = document.getElementById('errEmail');
+      			var errWachtwoord = document.getElementById('errWachtwoord');
+      			var errPostcode = document.getElementById('errPostcode');
+      			var errCity = document.getElementById('errCity');
 			var errStreet = document.getElementById('errStreet');
 			var errNumber = document.getElementById('errNumber');
 			var errGeboorteDatum = document.getElementById('errGeboorteDatum');
 
 			// input shortcuts
 			var qstName = document.getElementById('qstName');
-      var qstEmail = document.getElementById('qstEmail');
-      var qstWachtwoord = document.getElementById('qstWachtwoord');
-      var qstPostcode = document.getElementById('qstPostcode');
-      var qstCity = document.getElementById('qstCity');
+      			var qstEmail = document.getElementById('qstEmail');
+      			var qstWachtwoord = document.getElementById('qstWachtwoord');
+      			var qstPostcode = document.getElementById('qstPostcode');
+      			var qstCity = document.getElementById('qstCity');
 			var qstStreet = document.getElementById('qstStreet');
 			var qstNumber = document.getElementById('qstNumber');
 			var qstGeboorteDatum = document.getElementById('qstGeboorteDatum');
@@ -49,6 +49,16 @@
 			}
 			else {
 				document.getElementById('qstName').classList.add('valid');
+			}
+			// check email
+			if (!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]/.test(qstEmail.value)) {
+				isValid = false;
+				errEmail.innerHTML = 'gelieve een geldig email in te vullen';
+				errEmail.style.display = 'block';
+				document.getElementById('qstEmail').classList.add('invalid');
+			}
+			else {
+				document.getElementById('qstEmail').classList.add('valid');
 			}
 			// check country
 			if (qstCountry.value == -1) {
@@ -113,17 +123,6 @@
 				errAccept.innerHTML = 'gelieve te accepteren';
 				errAccept.style.display = 'block';
 			}
-			// check email
-			if (!/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]/.test(qstEmail.value)) {
-				isValid = false;
-				errEmail.innerHTML = 'gelieve een geldig email in te vullen';
-				errEmail.style.display = 'block';
-				document.getElementById('qstEmail').classList.add('invalid');
-			}
-			else {
-				document.getElementById('qstEmail').classList.add('valid');
-			}
-
 			// draw conclusion
 			if (isValid) {
 				document.getElementById('form1').style.display = "none";
