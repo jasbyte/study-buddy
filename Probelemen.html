@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problemen</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Problemen</h1>
+        <img src="../co-working app/city.jpg" alt="city" width="100%">
+        <button class="buttonback"> < </button>
+        <button class="btn2">NL</button>
+        <button class="btn2">FR</button>
+    </div>
+    <div class="problems">
+        <p>Zit je met vragen of heb je een probleem ?</p>
+        <p>Geen probleem, vul onderstaand formulier in en we zullen je zo snel mogelijk helpen.</p>
+    </div>
+
+    <fieldset>
+        <div class="naam">
+            <label for="naam">Naam*</label>
+            <input type="text" id="naam" value="" required />
+            <span class="message message--error" id="errnaam">&nbsp;</span>
+        </div>
+        <div class="familienaam">
+            <label for="familienaam">Familienaam*</label>
+            <input type="text" id="familienaam" value="" required />
+            <span class="message message--error" id="errfamilienaam">&nbsp;</span>
+        </div>
+        <div class="emial">
+            <label for="email">Email adress*</label>
+            <input type="email" id="email" value="" required />
+            <span class="message message--error" id="erremail">&nbsp;</span>
+        </div>
+        <div class="bericht">
+            <label for="bericht">Bericht*</label>
+            <textarea id="bericht" placeholder="Hier kun je jouw vraag stellen"></textarea>
+            <span class="message message--error" id="errbericht">&nbsp;</span>
+        </div>
+        </fieldset>
+        <button class="verzenden">Verzenden</button>
+    
+</body>
+</html>

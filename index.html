@@ -1,10 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="nl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="UTF-8">
-	<title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOT FINDR</title>
 </head>
 <body>
-	<img src="city.JPG">
+    <div class="header">
+    <h1>KOT FINDR</h1>
+    <img src="../co-working app/city.jpg" alt="city" width="100%">
+    <button class="btn">Login</button>
+    <button class="btn2">NL</button>
+    <button class="btn2">FR</button>
+</div>
+<div class="stad">
+<label for="stad">Selecteer je stad</label>
+<select id="stad" required>
+  <option selected="selected" value="-1">kies...</option>
+  <option value="Gent">Gent</option>
+  <option value="Antwerpen">Antwerpen</option>
+  <option value="Brussel">Brussel</option>
+  <option value="Hasselt">Hasselt</option>
+</select>
+<span class="message message--error" id="errstad">&nbsp;</span>
+</div>
+<div class="school">
+    <label for="school">Selecteer je school</label>
+    <select id="school" required>
+      <option selected="selected" value="-1">kies...</option>
+      <option value="Odisee campus Gent">Odisee campus Gent</option>
+      <option value="Universiteit Gent">Universiteit Gent</option>
+      <option value="Hogeschool Gent">Hogeschool Gent</option>
+    </select>
+    <span class="message message--error" id="errschool">&nbsp;</span>
+    </div>
+    <div class="prijsklasse">
+        <label for="prijsklasse">Selecteer je prijsklasse</label>
+        <select id="prijsklasse" required>
+          <option selected="selected" value="-1">kies...</option>
+          <option value="100">100</option>
+          <option value="200">200</option>
+          <option value="300">300</option>
+        </select>
+        <label>tot</label>
+        <select id="prijsklasse" required>
+            <option selected="selected" value="-1">kies...</option>
+            <option value="500">500</option>
+            <option value="600">600</option>
+            <option value="700">700</option>
+          </select>
+          <span class="message message--error" id="errprijsklasse">&nbsp;</span>
+        </div>
+        <div class="oppervlakte">
+            <label for="oppervlakte">Selecteer de oppervlakte</label>
+            <select id="oppervlakte" required>
+              <option selected="selected" value="-1">kies...</option>
+              <option value="50">50</option>
+              <option value=125">125</option>
+              <option value="380">380</option>
+            </select>
+            <span class="message message--error" id="erroppervlakte">&nbsp;</span>
+            </div>
+            <div class="afstand">
+                <label for="afstand">Selecteer je afstand tot de school</label>
+                <select id="afstand" required>
+                  <option selected="selected" value="-1">kies...</option>
+                  <option value="1">1</option>
+                  <option value=2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <span class="message message--error" id="errafstand">&nbsp;</span>
+                </div>
+                <button class=" btn2" id="btnreset">Reset</button>
+                <button class=" btn2" id="btnbevestig">Bevestig</button>
+                <button class=" btn2" id="btnhelp">Help</button>
+    
 </body>
 </html>
