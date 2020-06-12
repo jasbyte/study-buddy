@@ -1,3 +1,232 @@
-hallo
-sup
-rzfsbvgrshudfn
+* {
+    margin: auto;
+}
+
+header {
+    background-image: url("../img/city.jpg");
+    max-height: 200px;
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+header h1 {
+    padding-top: 150px;
+    font-size: 60px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+    background-color: #C73333;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 80px;
+    height: 30px;
+}
+
+
+.flexbox label {
+    padding-right: 30px;
+    padding-left: 15px;
+    width: 200px;
+}
+
+.flexbox select {
+    width: 150px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-container2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.flex-container3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.flexbox {
+    min-width: 400px;
+    max-width: 400px;
+    width: 400px;
+
+    flex-grow: 1;
+    align-items: center;
+    background-color: #DBDBDB;
+    border: #C73333 solid 1px;
+    border-radius: 10px;
+    margin: 30px 40px 30px 40px;
+    height: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+ .flex-container3 label{
+     padding-bottom: 15px;
+ }
+
+
+.flex-container2 img {
+    width: 100px;
+    height: 100px;
+}
+
+.minmax input {
+    width: 50px;
+}
+
+.minmax label {
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+.sur input{
+    width: 40px;
+}
+
+.sur {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sur label {
+    padding-right: 5px;
+    font-size: 14px;
+}
+
+.sur label{
+    padding-left: 0px;
+}
+
+#max {
+    padding-left: 20px;
+}
+
+.btn2 {
+    background-color: #C73333;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 75%;
+    height: 5px;
+    border-radius: 2px;
+    background: #FFFFFF;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #C73333;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.buttons {
+    width: 980px;
+    margin-bottom: 80px;
+}
+
+#btnreset {
+    margin-left: 10px;
+}
+
+#btnbevestig {
+    margin-right: 10px;
+    float: right;
+}
+
+#btnhelp {
+    margin-right: 10px;
+    float: right;
+}
+
+@media only screen and (max-width: 420px) {
+    header h1 {
+        font-size: 42px;
+        padding-top: 130px;
+    }
+    header {
+        background-image: url("../img/city2.jpg");
+    }
+
+    .btn {
+        width: 60px;
+    }
+
+    .flexbox {
+        margin-left: 15px;
+        margin-right: 15px;
+        max-width: 82%;
+        min-width: 82%;
+        margin-bottom: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .flex-container2 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .sur input{
+        width: 30px;
+    }
+
+    .buttons {
+        width: 100vw;
+    }
+}
