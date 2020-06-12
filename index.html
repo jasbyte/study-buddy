@@ -15,34 +15,48 @@
 </header>
 <main>
   <div class="stad">
-    <label for="stad">Selecteer je stad</label>
-    <select id="stad" required>
-      <option selected="selected" value="-1">kies...</option>
-      <option value="Gent">Gent</option>
-      <option value="Antwerpen">Antwerpen</option>
-      <option value="Brussel">Brussel</option>
-      <option value="Hasselt">Hasselt</option>
-    </select>
-    <span class="message message--error" id="errstad">&nbsp;</span>
+    <div class="img">
+      <img src="../co-working app/city.jpg" alt="city">
+    </div>
+    <div class="keuze"> 
+      <label for="stad">Selecteer je stad</label>
+        <select id="stad" required>
+          <option selected="selected" value="-1">kies...</option>
+          <option value="Gent">Gent</option>
+          <option value="Antwerpen">Antwerpen</option>
+          <option value="Brussel">Brussel</option>
+          <option value="Hasselt">Hasselt</option>
+        </select>
+      <span class="message message--error" id="errstad">&nbsp;</span>
+    </div>
   </div>
   <div class="school">
-    <label for="school">Selecteer je school</label>
-      <select id="school" required>
-        <option selected="selected" value="-1">kies...</option>
-        <option value="Odisee campus Gent">Odisee campus Gent</option>
-        <option value="Universiteit Gent">Universiteit Gent</option>
-        <option value="Hogeschool Gent">Hogeschool Gent</option>
-      </select>
+    <div class="img">
+      <img src="../co-working app/city.jpg" alt="city">
+    </div>
+    <div class="keuze">
+      <label for="school">Selecteer je school</label>
+        <select id="school" required>
+          <option selected="selected" value="-1">kies...</option>
+          <option value="Odisee campus Gent">Odisee campus Gent</option>
+          <option value="Universiteit Gent">Universiteit Gent</option>
+          <option value="Hogeschool Gent">Hogeschool Gent</option>
+        </select>
       <span class="message message--error" id="errschool">&nbsp;</span>
+    </div>
   </div>
   <div class="prijsklasse">
-    <label for="prijsklasse">Selecteer je prijsklasse</label>
-      <select id="prijsklasse" required>
-        <option selected="selected" value="-1">kies...</option>
-        <option value="100">100</option>
-        <option value="200">200</option>
-        <option value="300">300</option>
-      </select>
+    <div class="img">
+      <img src="../co-working app/city.jpg" alt="city">
+    </div>
+    <div class="keuze">
+      <label for="prijsklasse">Selecteer je prijsklasse</label>
+        <select id="prijsklasse" required>
+          <option selected="selected" value="-1">kies...</option>
+          <option value="100">100</option>
+          <option value="200">200</option>
+          <option value="300">300</option>
+        </select>
       <label>tot</label>
         <select id="prijsklasse" required>
           <option selected="selected" value="-1">kies...</option>
@@ -50,9 +64,14 @@
           <option value="600">600</option>
           <option value="700">700</option>
         </select>
-          <span class="message message--error" id="errprijsklasse">&nbsp;</span>
+      <span class="message message--error" id="errprijsklasse">&nbsp;</span>
     </div>
+  </div>
     <div class="oppervlakte">
+      <div class="img">
+        <img src="../co-working app/city.jpg" alt="city">
+      </div>
+      <div class="keuze">
         <label for="oppervlakte">Selecteer de oppervlakte</label>
           <select id="oppervlakte" required>
             <option selected="selected" value="-1">kies...</option>
@@ -60,21 +79,26 @@
             <option value=125">125</option>
             <option value="380">380</option>
           </select>
-          <span class="message message--error" id="erroppervlakte">&nbsp;</span>
+        <span class="message message--error" id="erroppervlakte">&nbsp;</span>
+      </div>
     </div>
     <div class="afstand">
-      <label for="afstand">Selecteer je afstand tot de school</label>
-        <select id="afstand" required>
-          <option selected="selected" value="-1">kies...</option>
-          <option value="1">1</option>
-          <option value=2">2</option>
-          <option value="3">3</option>
-        </select>
+      <div class="img">
+        <img src="../co-working app/city.jpg" alt="city">
+      </div>
+        <label for="afstand">Selecteer je afstand tot de school</label>
+          <select id="afstand" required>
+            <option selected="selected" value="-1">kies...</option>
+            <option value="1">1</option>
+            <option value=2">2</option>
+            <option value="3">3</option>
+          </select>
         <span class="message message--error" id="errafstand">&nbsp;</span>
       </div>
+    </div>
 </main>
-  <button class=" btn2" id="btnreset">Reset</button>
-  <button class=" btn2" id="btnbevestig">Bevestig</button>
-  <button class=" btn2" id="btnhelp">Help</button>
+  <button class="btn2" id="btnreset">Reset</button>
+  <button class="btn2" id="btnbevestig">Bevestig</button>
+  <button class="btn2" id="btnhelp">Help</button>
 </body>
 </html>
