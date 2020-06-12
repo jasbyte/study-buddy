@@ -1,104 +1,113 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOT FINDR</title>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>GENT</h1>
-    <img src="../co-working app/city.jpg" alt="city" width="100%">
+<header>
+    <h1>KOT FINDR</h1>
     <button class="btn">Login</button>
-    <button class="btn2">NL</button>
-    <button class="btn2">FR</button>
+    <!--<button id="test" class="btn2">NL</button>
+    <button class="btn2">FR</button>-->
 </header>
 <main>
-  <div class="stad">
-    <div class="img">
-      <img src="../co-working app/city.jpg" alt="city">
+    <div class="flex-container">
+        <div class="flex-container2 flexbox">
+            <div>
+                <img src="../img/city.png">
+            </div>
+            <div class="flex-container3">
+                <label for="stad">In welke stad zoekt u een kot?</label>
+
+                <select id="stad" required>
+                    <option selected="selected" value="-1">kies...</option>
+                    <option value="Gent">Gent</option>
+                    <option value="Antwerpen">Antwerpen</option>
+                    <option value="Brussel">Brussel</option>
+                    <option value="Hasselt">Hasselt</option>
+                </select>
+            </div>
+
+            <span class="message message--error" id="errstad">&nbsp;</span>
+        </div>
+
+        <div class="flex-container2 flexbox">
+            <div>
+                <img src="../img/school.png">
+            </div>
+            <div class="flex-container3">
+                <label for="school">In de buurt van welke school zoekt u een kot?</label>
+
+                <select id="school" required>
+                    <option selected="selected" value="-1">kies...</option>
+                    <option value="Odisee campus Gent">Odisee campus Gent</option>
+                    <option value="Universiteit Gent">Universiteit Gent</option>
+                    <option value="Hogeschool Gent">Hogeschool Gent</option>
+                </select>
+            </div>
+
+            <span class="message message--error" id="errschool">&nbsp;</span>
+        </div>
+
+        <div class="flex-container2 flexbox ">
+            <div>
+                <img src="../img/geld.png">
+            </div>
+            <div class="flex-container3">
+                <label for="prijsklasse">Wat mag het kosten?</label>
+                <div class="minmax">
+                    <label>Min.</label>
+                    <input type="number">
+                    <label>Max</label>
+                    <input type="number">
+                </div>
+            </div>
+
+            <span class="message message--error" id="errprijsklasse">&nbsp;</span>
+        </div>
+
+        <div class="flex-container2 flexbox ">
+            <div>
+                <img src="../img/opp.png">
+            </div>
+            <div class="flex-container3">
+                <label for="surface">Hoe groot mag het kot zijn?</label>
+                <div class="sur">
+                    <label>Min.</label>
+                    <input type="number">
+                    <label>m²</label>
+                    <label id = "max">Max</label>
+                    <input type="number">
+                    <label>m²</label>
+                </div>
+            </div>
+
+            <span class="message message--error" id="errprijsklasse">&nbsp;</span>
+        </div>
+
+        <div class="flexbox flex-container2">
+            <div>
+                <img src="../img/dis.png">
+            </div>
+            <div class="flex-container3">
+                <label for="prijsklasse">Hoe ver mag uw kot verwijderd zijn van uw school (km)?</label>
+                <input type="range" min="0" max="50" class="slider">
+            </div>
+
+            <span class="message message--error" id="errprijsklasse">&nbsp;</span>
+        </div>
     </div>
-    <div class="keuze"> 
-      <label for="stad">Selecteer je stad</label>
-        <select id="stad" required>
-          <option selected="selected" value="-1">kies...</option>
-          <option value="Gent">Gent</option>
-          <option value="Antwerpen">Antwerpen</option>
-          <option value="Brussel">Brussel</option>
-          <option value="Hasselt">Hasselt</option>
-        </select>
-      <span class="message message--error" id="errstad">&nbsp;</span>
-    </div>
-  </div>
-  <div class="school">
-    <div class="img">
-      <img src="../co-working app/city.jpg" alt="city">
-    </div>
-    <div class="keuze">
-      <label for="school">Selecteer je school</label>
-        <select id="school" required>
-          <option selected="selected" value="-1">kies...</option>
-          <option value="Odisee campus Gent">Odisee campus Gent</option>
-          <option value="Universiteit Gent">Universiteit Gent</option>
-          <option value="Hogeschool Gent">Hogeschool Gent</option>
-        </select>
-      <span class="message message--error" id="errschool">&nbsp;</span>
-    </div>
-  </div>
-  <div class="prijsklasse">
-    <div class="img">
-      <img src="../co-working app/city.jpg" alt="city">
-    </div>
-    <div class="keuze">
-      <label for="prijsklasse">Selecteer je prijsklasse</label>
-        <select id="prijsklasse" required>
-          <option selected="selected" value="-1">kies...</option>
-          <option value="100">100</option>
-          <option value="200">200</option>
-          <option value="300">300</option>
-        </select>
-      <label>tot</label>
-        <select id="prijsklasse" required>
-          <option selected="selected" value="-1">kies...</option>
-          <option value="500">500</option>
-          <option value="600">600</option>
-          <option value="700">700</option>
-        </select>
-      <span class="message message--error" id="errprijsklasse">&nbsp;</span>
-    </div>
-  </div>
-    <div class="oppervlakte">
-      <div class="img">
-        <img src="../co-working app/city.jpg" alt="city">
-      </div>
-      <div class="keuze">
-        <label for="oppervlakte">Selecteer de oppervlakte</label>
-          <select id="oppervlakte" required>
-            <option selected="selected" value="-1">kies...</option>
-            <option value="50">50</option>
-            <option value=125">125</option>
-            <option value="380">380</option>
-          </select>
-        <span class="message message--error" id="erroppervlakte">&nbsp;</span>
-      </div>
-    </div>
-    <div class="afstand">
-      <div class="img">
-        <img src="../co-working app/city.jpg" alt="city">
-      </div>
-        <label for="afstand">Selecteer je afstand tot de school</label>
-          <select id="afstand" required>
-            <option selected="selected" value="-1">kies...</option>
-            <option value="1">1</option>
-            <option value=2">2</option>
-            <option value="3">3</option>
-          </select>
-        <span class="message message--error" id="errafstand">&nbsp;</span>
-      </div>
+
+    <div class="buttons">
+        <button class="btn2" id="btnreset">Reset</button>
+        <button class="btn2" id="btnbevestig">Bevestig</button>
+        <button class="btn2" id="btnhelp">Help</button>
     </div>
 </main>
-  <button class="btn2" id="btnreset">Reset</button>
-  <button class="btn2" id="btnbevestig">Bevestig</button>
-  <button class="btn2" id="btnhelp">Help</button>
+
 </body>
 </html>
