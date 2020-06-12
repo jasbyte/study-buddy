@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="nl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -11,20 +11,18 @@
 <header>
     <h1>KOT FINDR</h1>
     <button class="btn">Login</button>
-    <!--<button id="test" class="btn2">NL</button>
-    <button class="btn2">FR</button>-->
 </header>
 <main>
     <div class="flex-container">
         <div class="flex-container2 flexbox">
             <div>
-                <img src="../img/city.png">
+                <img src="../img/city.png" alt = "city icon">
             </div>
             <div class="flex-container3">
                 <label for="stad">In welke stad zoekt u een kot?</label>
 
                 <select id="stad" required>
-                    <option selected="selected" value="-1">kies...</option>
+                    <option  value="">kies...</option>
                     <option value="Gent">Gent</option>
                     <option value="Antwerpen">Antwerpen</option>
                     <option value="Brussel">Brussel</option>
@@ -37,13 +35,13 @@
 
         <div class="flex-container2 flexbox">
             <div>
-                <img src="../img/school.png">
+                <img src="../img/school.png" alt = "school icon">
             </div>
             <div class="flex-container3">
                 <label for="school">In de buurt van welke school zoekt u een kot?</label>
 
                 <select id="school" required>
-                    <option selected="selected" value="-1">kies...</option>
+                    <option value="">kies...</option>
                     <option value="Odisee campus Gent">Odisee campus Gent</option>
                     <option value="Universiteit Gent">Universiteit Gent</option>
                     <option value="Hogeschool Gent">Hogeschool Gent</option>
@@ -55,15 +53,15 @@
 
         <div class="flex-container2 flexbox ">
             <div>
-                <img src="../img/geld.png">
+                <img src="../img/geld.png" alt = "money icon">
             </div>
             <div class="flex-container3">
-                <label for="prijsklasse">Wat mag het kosten?</label>
+                <label>Wat mag het kosten?</label>
                 <div class="minmax">
-                    <label>Min.</label>
-                    <input type="number">
-                    <label>Max</label>
-                    <input type="number">
+                    <label for = "maxprijs">Min.</label>
+                    <input id = "maxprijs" type="number">
+                    <label for = "minprijs">Max</label>
+                    <input id = "minprijs" type="number">
                 </div>
             </div>
 
@@ -72,33 +70,33 @@
 
         <div class="flex-container2 flexbox ">
             <div>
-                <img src="../img/opp.png">
+                <img src="../img/opp.png" alt = "surface icon">
             </div>
             <div class="flex-container3">
-                <label for="surface">Hoe groot mag het kot zijn?</label>
+                <label>Hoe groot mag het kot zijn?</label>
                 <div class="sur">
-                    <label>Min.</label>
-                    <input type="number">
+                    <label for = "surfaceMin" >Min.</label>
+                    <input id = "surfaceMin" type="number">
                     <label>m²</label>
-                    <label id = "max">Max</label>
-                    <input type="number">
+                    <label for = "surfaceMax" id = "max">Max</label>
+                    <input id = "surfaceMax" type="number">
                     <label>m²</label>
                 </div>
             </div>
 
-            <span class="message message--error" id="errprijsklasse">&nbsp;</span>
+            <span class="message message--error" id="errOpp">&nbsp;</span>
         </div>
 
         <div class="flexbox flex-container2">
             <div>
-                <img src="../img/dis.png">
+                <img src="../img/dis.png" alt = "distence icon">
             </div>
             <div class="flex-container3">
                 <label for="prijsklasse">Hoe ver mag uw kot verwijderd zijn van uw school (km)?</label>
-                <input type="range" min="0" max="50" class="slider">
+                <input type="range" min="0" max="50" class="slider" id = "prijsklasse">
             </div>
 
-            <span class="message message--error" id="errprijsklasse">&nbsp;</span>
+            <span class="message message--error" id="errdistence">&nbsp;</span>
         </div>
     </div>
 
