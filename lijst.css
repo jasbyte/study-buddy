@@ -1,0 +1,142 @@
+* {
+    margin: auto;
+}
+
+header {
+    background-image: url("../img/city.jpg");
+    max-height: 200px;
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+header h1 {
+    padding-top: 150px;
+    font-size: 60px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn {
+    background-color: #C73333;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 80px;
+    height: 30px;
+    float: right;
+}
+
+.flexbox {
+    min-width: 475px;
+    max-width: 475px;
+    width: 400px;
+
+    flex-grow: 1;
+    align-items: center;
+    background-color: #DBDBDB;
+    margin: 30px 40px 30px 40px;
+    padding: 20px 20px 25px 10px;
+}
+
+.flexbox input {
+    margin-left: 20px;
+    width: 185px;
+    height: 20px;
+    color: #FFFFFF;
+    background-color: #C73333;
+    border: none;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-container2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+img {
+    width: 250px;
+    border: black 1px solid;
+    border-radius: 10px;
+}
+
+p , .stars{
+    font-family: sans-serif;
+    background-color: #FFFFFF;
+
+    padding: 2px 20px 2px 10px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.checked {
+    color: yellow;
+}
+
+.info {
+    margin-top: 18px;
+}
+
+@media only screen and (max-width: 420px) {
+    header h1 {
+        font-size: 42px;
+        padding-top: 130px;
+    }
+
+    header {
+        background-image: url("../img/city2.jpg");
+    }
+
+    .btn {
+        width: 60px;
+    }
+
+    .flexbox {
+        margin-left: 5px;
+        margin-right: 5px;
+        max-width: 82%;
+        min-width: 82%;
+        margin-bottom: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .flexbox input {
+        width: 150px;
+        height: 20px;
+    }
+
+    img {
+        width: 175px;
+        height: 125px;
+    }
+
+    .flexbox p {
+        font-size: 12px;
+        padding-right: 5px;
+        width: 135px;
+    }
+
+    .flexbox {
+        padding-right: 30px;
+        padding-left: 30px;
+        height: 150px;
+    }
+
+    .info {
+        margin-top: 10px;
+    }
+}
