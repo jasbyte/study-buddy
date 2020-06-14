@@ -206,4 +206,8 @@ body {
     .flex-container p, .flex-container .stars{
         margin-bottom: 15px;
     }
+
+    .extra {
+        max-width: 350px;
+    }
 }
