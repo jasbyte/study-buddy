@@ -6,64 +6,72 @@
     <title>Registreer</title>
 </head>
 <body>
-    <header>
-        <h1>GENT</h1>
-        <img src="../co-working app/city.jpg" alt="city" width="100%">
-        <button class="btn">Login</button>
-        <button class="btn2">NL</button>
-        <button class="btn2">FR</button>
-    </header>
-    <main>
-    <fieldset>
-        <div class="naam">
-            <label for="naam">Naam*</label>
-            <input type="text" id="naam" value="" required />
-            <span class="message message--error" id="errnaam">&nbsp;</span>
+<header>
+    <h1>GENT</h1>
+</header>
+<main>
+    <form id="form1">
+        <div id="summary">
+            Het formulier is onvolledig ingevuld en/of bevat fouten. Gelieve dit te corrigeren en opnieuw te proberen.
         </div>
-        <div class="email">
-            <label for="qstemail">Email adress*</label>
-            <input type="email" id="qstemail" value="" required />
-            <span class="message message--error" id="erremail">&nbsp;</span>
-        </div>
-        <div class="Wachtwoord">
-            <label for="Wachtwoord">Wachtwoord*</label>
-            <input type="password" id="Wachtwoord" value="" required />
-            <span class="message message--error" id="errwachtwoord">&nbsp;</span>
-        </div>
-        <div class="Wachtwoord">
-            <label for="Wachtwoord">Wachtwoord bevestigen*</label>
-            <input type="password" id="Wachtwoord" value="" required />
-            <span class="message message--error" id="errwachtwoord">&nbsp;</span>
-        </div>
-        <div class="poscode">
-            <label for="postcode">Postcode*</label>
-            <input type="number" id="poscode" value="" required />
-            <span class="message message--error" id="errpostcode">&nbsp;</span>
-        </div>
-        <div class="stad">
-            <label for="stad">Stad*</label>
-            <input type="text" id="stad" value="" required />
-            <span class="message message--error" id="errstad">&nbsp;</span>
-        </div>
-        <div class="straat">
-            <label for="straat">Straat*</label>
-            <input type="text" id="straat" value="" required />
-            <span class="message message--error" id="errstraat">&nbsp;</span>
-        </div>
-        <div class="huisnummer">
-            <label for="huisnummer">Huisnummer*</label>
-            <input type="number" id="huisnummer" value="" required />
-            <span class="message message--error" id="errhuisnummer">&nbsp;</span>
-        </div>
-        <div class="geboortedatum">
-            <label for="geboortedatum">HGeboortedatum*</label>
-            <input type="text" id="geboortedatum value="" required />
-            <span class="message message--error" id="errgeboortedatum">&nbsp;</span>
-        </div>
-    </fieldset>
-    </main>
-    <button class="button"> Account aanmaken</button>
 
-    
+        <fieldset>
+            <div class="qstn qstn1">
+                <label for="qstName">Naam *</label>
+                <input type="text" id="qstName" value="" required />
+                <span class="message message--error" id="errName"> </span>
+            </div>
+            <div class="qstn qstn2">
+                <label for="qstEmail">Email adress*</label>
+                <input type="email" id="qstEmail" value="" required />
+                <span class="message message--error" id="errEmail"> </span>
+            </div>
+            <div class="qstn qstn3">
+                <label for="qstPassword">Wachtwoord*</label>
+                <input type="password" id="qstPassword" value="" required />
+                <span class="message message--error" id="errPassword"> </span>
+            </div>
+            <div class="qstn qstn4">
+                <label for="qstPassword2">Wachtwoord bevestigen*</label>
+                <input type="password" id="qstPassword2" value="" required />
+                <span class="message message--error" id="errPassword2"> </span>
+            </div>
+            <div class="qstn qstn5">
+                <label for="qstZIP">Postcode*</label>
+                <input type="number" id="qstZIP" value="" required />
+                <span class="message message--error" id="errZIP"> </span>
+            </div>
+            <div class="qstn qstn6">
+                <label for="qstnCity">Stad*</label>
+                <input type="text" id="qstnCity" value="" required />
+                <span class="message message--error" id="errCity"> </span>
+            </div>
+            <div class="qstn qstn7">
+                <label for="qstnStreet">Straat*</label>
+                <input type="text" id="qstnStreet" value="" required />
+                <span class="message message--error" id="errStreet"> </span>
+            </div>
+            <div class="qstn qstn8">
+                <label for="qstnHousenumber">Huisnummer*</label>
+                <input type="number" id="qstnHousenumber" value="" required />
+                <span class="message message--error" id="errHousenumber"> </span>
+            </div>
+            <div class="qstn qstn9">
+                <label for="qstnBirthdate">HGeboortedatum*</label>
+                <input type="text" id="qstnBirthdate" value="" required />
+                <span class="message message--error" id="errBirthdate">&nbsp;</span>
+            </div>
+        </fieldset>
+        <div class="buttons clearfix">
+            <input type="submit" id="btnSubmit" value="Registreren" />
+        </div>
+    </form>
+    <div id = "thankyou">
+        <h1>Bedankt!</h1>
+        <div id="thankyou__message">
+            Je registratie is voltooid. Over enkele ogenblikken zul je een e-mail ontvangen met verdere instructies.
+        </div>
+    </div>
+</main>
 </body>
 </html>
