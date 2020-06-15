@@ -18,31 +18,35 @@
         <p>Zit je met vragen of heb je een probleem ?</p>
         <p>Geen probleem, vul onderstaand formulier in en we zullen je zo snel mogelijk helpen.</p>
     </div>
-
+    <form id="form1">
     <fieldset>
         <div class="naam">
-            <label for="naam">Naam*</label>
-            <input type="text" id="naam" value="" required />
+            <label for="qstnaam">Naam*</label>
+            <input type="text" id="qstnaam" value="" required />
             <span class="message message--error" id="errnaam">&nbsp;</span>
         </div>
         <div class="familienaam">
-            <label for="familienaam">Familienaam*</label>
-            <input type="text" id="familienaam" value="" required />
+            <label for="qstfamilienaam">Familienaam*</label>
+            <input type="text" id="qstfamilienaam" value="" required />
             <span class="message message--error" id="errfamilienaam">&nbsp;</span>
         </div>
-        <div class="emial">
-            <label for="email">Email adress*</label>
-            <input type="email" id="email" value="" required />
+        <div class="email">
+            <label for="qstemail">Email adress*</label>
+            <input type="email" id="qstemail" value="" required />
             <span class="message message--error" id="erremail">&nbsp;</span>
         </div>
         <div class="bericht">
-            <label for="bericht">Bericht*</label>
-            <textarea id="bericht" placeholder="Hier kun je jouw vraag stellen"></textarea>
+            <label for="qstbericht">Bericht*</label>
+            <textarea id="qstbericht" placeholder="Hier kun je jouw vraag stellen"></textarea>
             <span class="message message--error" id="errbericht">&nbsp;</span>
         </div>
     </fieldset>
-</main>
-<button class="verzenden">Verzenden</button>
-    
+    <div class="buttons clearfix">
+        <input type="submit" id="btnSubmit" value="verzenden" />
+    </div>
+    </form>
+</main>    
+<script src="Probelemen.js"></script>
+<script src="Probelemenairtable.js"></script>
 </body>
 </html>
