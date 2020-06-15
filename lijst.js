@@ -44,13 +44,13 @@
                     let spanStar5;
 
                     let inputBtn;
-
                     for (let record of dataK.records ) {
                         if (dataF.records[filterId].fields.Stad === record.fields.Stad) {
                             if ((dataF.records[filterId].fields.minPrijs <= record.fields.Kostprijs) && dataF.records[filterId].fields.maxPrijs >= record.fields.Kostprijs) {
                                 if ((dataF.records[filterId].fields.minOpp <= record.fields.Oppervlakte) && dataF.records[filterId].fields.maxOpp >= record.fields.Oppervlakte) {
                                     //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
-
+                                    document.getElementById("stad").innerText = record.fields.Stad;
+                                    
                                     divFlex2 = document.createElement('div');
                                     divFlex2.setAttribute('class', 'flex-container2 flexbox');
                                     divFlex1.appendChild(divFlex2);
