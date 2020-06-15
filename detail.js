@@ -10,6 +10,8 @@
             console.log(id);
             var slideIndex = 1;
             showSlides(slideIndex);
+            document.getElementById("stad").innerText = data.records[id].fields.Stad;
+
             document.getElementById("img1").src = data.records[id].fields.Afbeelding1[0].url;
             document.getElementById("img2").src = data.records[id].fields.Afbeelding2[0].url;
             document.getElementById("img3").src = data.records[id].fields.Afbeelding3[0].url;
@@ -61,6 +63,13 @@
                 document.getElementById("ster5").className = "fa fa-star";
             }
 
+            document.getElementById("login").addEventListener('click', function () {
+                window.location.href = "login.html";
+            });
+
+            document.getElementById("back").addEventListener('click', function () {
+                window.location.href = "lijst.html";
+            });
 
             document.getElementById("prev").addEventListener('click', function () {
                 plusSlides(-1);
