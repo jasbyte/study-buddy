@@ -1,0 +1,196 @@
+* {
+    margin: auto;
+}
+
+header {
+    background-image: url("../img/city.jpg");
+    max-height: 200px;
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+header h1 {
+    padding-top: 160px;
+    font-size: 60px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-size: 0.625em;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+p, div.qstn {
+    margin-bottom: 2em;
+}
+
+/* helper classes */
+
+.structural {
+    left: -9999px;
+    position: absolute;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* ===========================================
+	General
+	=========================================== */
+
+/* elements */
+
+
+
+/* ===========================================
+	Form styles
+	=========================================== */
+
+/* elements */
+
+form, #thankyou {
+    background-color: #fafafa;
+    font-family: sans-serif;
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 3rem;
+}
+
+fieldset {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+label {
+    display: block;
+    font-family: Lato, Arial;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+input, select {
+    border: 1px solid rgba(0, 0, 0, .08);
+    color: #444;
+    display: block;
+    font-size: 1.4rem;
+    height: 3rem;
+    line-height: 2rem;
+    outline: 0;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+input[type=submit] {
+    height: auto;
+    margin: auto;
+    width: 100%;
+}
+
+input[type=submit] {
+    background-color: #fff;
+    border: 3px #C73333 solid;
+    color: #C73333;
+    cursor: pointer;
+    float: right;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+    background-color: #C73333;
+    color: #fff;
+}
+
+/* classes */
+
+.input--half {
+    width: 50%;
+}
+
+.message {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 0;
+}
+
+.message--error {
+    display: none;
+    color: #c00;
+}
+
+.invalid {
+    box-shadow: 0 0 3px 0 rgba(227, 64, 100, 0.8);
+}
+
+.valid {
+    box-shadow: 0 0 3px 0 rgba(64, 227, 100, 0.8);
+}
+
+/* specific */
+
+#qstZIP {
+    max-width: 20rem;
+}
+
+#summary {
+    background-color: rgba(227, 64, 100, 0.2);
+    border: 4px ridge;
+    border-color: rgba(227, 64, 100, 0.2);
+    display: none;
+    height: auto;
+    margin: 1rem 0 3rem 0;
+    padding: 2rem;
+    overflow: hidden;
+    transition: padding 1s, height 1s;
+}
+
+#thankyou {
+    display: none;
+}
+
+#thankyou__message {
+    padding: 2rem;
+    background-color: rgba(64, 227, 100, 0.2);
+    border: 4px ridge;
+    border-color: rgba(64, 227, 100, 0.2);
+    margin: 1rem 0 3rem 0;
+}
+
+
+
+@media only screen and (max-width: 420px) {
+    header h1 {
+        font-size: 42px;
+        padding-top: 130px;
+    }
+
+    header {
+        background-image: url("../img/city2.jpg");
+    }
+
+    p, div.qstn {
+        margin-bottom: 1em;
+    }
+}
