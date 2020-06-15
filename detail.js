@@ -6,7 +6,7 @@
     })
         .then(response => response.json())
         .then(data => {
-            let id = localStorage.getItem("id");
+            let id = sessionStorage.getItem('id');
             console.log(id);
             var slideIndex = 1;
             showSlides(slideIndex);
