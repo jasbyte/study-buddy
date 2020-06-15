@@ -4,29 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compare</title>
+    <link rel="stylesheet" type="text/css" href="../css/compare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <header>
     <h1>GENT</h1>
-    <img src="../co-working app/city.jpg" alt="city" width="100%">
-    <button class="btn">Login</button>
 </header>
 <main>
-    <table cellspacing = "0" cellpadding="0">
+    <table id = "compare">
         <tr>
-            <th>Kot1</th>
+            <th><img src="../img/test.jpg" alt="afbeelding kot 1"></th>
             <th></th>
-            <th>Kot2</th>
+            <th><img src="../img/test.jpg" alt="afbeelding kot 2"></th>
         </tr>
         <tr>
-            <td id="rating1"></td>
-            <td>Rating van de site</td>
-            <td id="rating2"></td>
+            <th>Kot 1</th>
+            <th></th>
+            <th>Kot 2</th>
         </tr>
         <tr>
-            <td id="prijs1"></td>
+            <td id="rating1">
+                <div class="stars">
+                    <span id="ster1" class="fa fa-star checked"></span>
+                    <span id="ster2" class="fa fa-star checked"></span>
+                    <span id="ster3" class="fa fa-star checked"></span>
+                    <span id="ster4" class="fa fa-star"></span>
+                    <span id="ster5" class="fa fa-star"></span>
+                </div>
+            </td>
+
+            <td>Rating</td>
+            <td id="rating2">
+                <div class="stars">
+                    <span id="ster6" class="fa fa-star checked"></span>
+                    <span id="ster7" class="fa fa-star checked"></span>
+                    <span id="ster8" class="fa fa-star checked"></span>
+                    <span id="ster9" class="fa fa-star"></span>
+                    <span id="ster10" class="fa fa-star"></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="prijs1">5</td>
             <td>Prijs/maand</td>
-            <td id="prijs2"></td>
+            <td id="prijs2">5</td>
         </tr>
         <tr>
             <td id="opp1"></td>
@@ -43,14 +65,8 @@
             <td>Adres</td>
             <td id="adres2"></td>
         </tr>
-        <tr>
-            <td id="beoordeling1"></td>
-            <td>Beoordeling vorige huurdes</td>
-            <td id="beoordeling2"></td>
-        </tr>
     </table>
 </main>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160493.78037691236!2d3.621093916448463!3d51.05819433698385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c370e1339443ad%3A0x40099ab2f4d5140!2sGent!5e0!3m2!1snl!2sbe!4v1591865377632!5m2!1snl!2sbe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
 </body>
 </html>
