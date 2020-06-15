@@ -1,3 +1,6 @@
+let id = 0;
+let curId=null;
+
 ;(function() {
     'use strict'
     let querystring = '?sort%5B0%5D%5Bfield%5D=Date';
@@ -22,8 +25,6 @@
                         filterId = rec.fields.Id-1;
                     }
 
-                    let id = 0;
-
                     let divFlex1 = document.createElement('div');
                     divFlex1.setAttribute('class', 'flex-container');
                     document.body.appendChild(divFlex1);
@@ -44,15 +45,16 @@
                     let spanStar5;
 
                     let inputBtn;
+
                     for (let record of dataK.records ) {
                         if (dataF.records[filterId].fields.Stad === record.fields.Stad) {
                             if ((dataF.records[filterId].fields.minPrijs <= record.fields.Kostprijs) && dataF.records[filterId].fields.maxPrijs >= record.fields.Kostprijs) {
                                 if ((dataF.records[filterId].fields.minOpp <= record.fields.Oppervlakte) && dataF.records[filterId].fields.maxOpp >= record.fields.Oppervlakte) {
                                     //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
-                                    document.getElementById("stad").innerText = record.fields.Stad;
-                                    
+
                                     divFlex2 = document.createElement('div');
-                                    divFlex2.setAttribute('class', 'flex-container2 flexbox');
+                                    divFlex2.setAttribute('class', 'flex-container2');
+                                    divFlex2.setAttribute('class', 'flexbox');
                                     divFlex1.appendChild(divFlex2);
 
                                     divImg = document.createElement('div');
@@ -176,19 +178,13 @@
                                     inputBtn.setAttribute('id', id);
                                     inputBtn.setAttribute('value', 'Bekijk');
 
-                                    //inputBtn.setAttribute("onClick", 'localStorage.setItem("id", id);');
-                                    //inputBtn.setAttribute("onClick", 'alert(localStorage.getItem("id"));');
-                                    inputBtn.setAttribute("onClick", 'window.location.href = "detail.html";');
-
-
-
+                                    inputBtn.setAttribute("onClick", "curId=id;sessionStorage.setItem('id', id);window.location.href = 'detail.html';");
                                     divInfo.appendChild(inputBtn);
-
 
                                 }
                             }
-                            id++;
                         }
+                        id++;
                     }
                 });
         });
