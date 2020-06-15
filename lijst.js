@@ -49,7 +49,7 @@
                         if (dataF.records[filterId].fields.Stad === record.fields.Stad) {
                             if ((dataF.records[filterId].fields.minPrijs <= record.fields.Kostprijs) && dataF.records[filterId].fields.maxPrijs >= record.fields.Kostprijs) {
                                 if ((dataF.records[filterId].fields.minOpp <= record.fields.Oppervlakte) && dataF.records[filterId].fields.maxOpp >= record.fields.Oppervlakte) {
-                                    alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
+                                    //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
 
                                     divFlex2 = document.createElement('div');
                                     divFlex2.setAttribute('class', 'flex-container2');
@@ -58,7 +58,7 @@
 
                                     divImg = document.createElement('div');
                                     let img = new Image();
-                                    img.src = dataK.records[id].fields.ImgTest;
+                                    img.src = record.fields.Afbeelding1[0].url;
                                     img.setAttribute('alt', 'Foto van studentenkot');
                                     divImg.appendChild(img);
                                     divFlex2.appendChild(divImg);
@@ -176,7 +176,16 @@
                                     inputBtn.setAttribute('type', 'submit');
                                     inputBtn.setAttribute('id', id);
                                     inputBtn.setAttribute('value', 'Bekijk');
+
+                                    //inputBtn.setAttribute("onClick", 'localStorage.setItem("id", id);');
+                                    //inputBtn.setAttribute("onClick", 'alert(localStorage.getItem("id"));');
+                                    inputBtn.setAttribute("onClick", 'window.location.href = "detail.html";');
+
+
+
                                     divInfo.appendChild(inputBtn);
+
+
                                 }
                             }
                             id++;
