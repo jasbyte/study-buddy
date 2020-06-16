@@ -26,19 +26,15 @@
                     let compare1 = sessionStorage.getItem('vergelijk1').charAt(0);
                     let compare2 = sessionStorage.getItem('vergelijk2').charAt(0);
 
-                    for(let i=0; i <= dataK.records[compare1].fields.Score; i++) {
+                    for(let i=1; i <= dataK.records[compare1].fields.Score; i++) {
                         document.getElementById("ster"+i).className = "fa fa-star checked";
                     }
-
                     for(let i=6; i <= dataK.records[compare2].fields.Score+5; i++) {
                         document.getElementById("ster"+i).className = "fa fa-star checked";
                     }
 
-                    document.getElementById("imgKot1").src = dataK.records[compare1].fields.Afbeelding1;
-                    document.getElementById("imgKot2").src = dataK.records[compare2].fields.Afbeelding1;
-
-                    document.getElementById("rating1").innerText = dataK.records[compare1].fields.Score;
-                    document.getElementById("rating2").innerText = dataK.records[compare2].fields.Score;
+                    document.getElementById("imgKot1").src = dataK.records[compare1].fields.Afbeelding1[0].url;
+                    document.getElementById("imgKot2").src = dataK.records[compare2].fields.Afbeelding1[0].url;
 
                     document.getElementById("prijs1").innerText = dataK.records[compare1].fields.Kostprijs;
                     document.getElementById("prijs2").innerText = dataK.records[compare2].fields.Kostprijs;
