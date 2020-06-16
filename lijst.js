@@ -84,6 +84,7 @@ sessionStorage.clear();
                                     divStars = document.createElement('div');
                                     divStars.setAttribute('class', 'stars');
                                     divInfo.appendChild(divStars);
+                                    
                                     if (record.fields.Score>=1) {
                                         spanStar1 = document.createElement('span');
                                         spanStar1.setAttribute('class', 'fa fa-star checked');
@@ -188,12 +189,11 @@ sessionStorage.clear();
                                     compareBtn.setAttribute('value', 'Vergelijk');
                                     vergelijk=0;
                                     compareBtn.setAttribute("onClick", "vergelijk++;\n" +
-                                        "        sessionStorage.setItem('vergelijk'+vergelijk, id);\n" +
-                                        "        alert(id);\n" +
-                                        "        if (vergelijk > 1) {\n" +
-                                        "            alert(\"heloow\");\n" +
-                                        "            window.location.href = \"compare.html\";\n" +
-                                        "        }");
+                                        "                        sessionStorage.setItem('vergelijk'+vergelijk, id);\n" +
+                                        "                        if (vergelijk > 1) {\n" +
+                                        "                            document.getElementById(id).disabled = true;\n" +
+                                        "                            window.location.href = \"compare.html\";\n" +
+                                        "                        }");
                                     //vergelijk++;sessionStorage.setItem('vergelijk'+vergelijk+'', vergelijk);alert('hey');console.log(vergelijk);
                                     divInfo.appendChild(compareBtn);
                                 }
@@ -203,5 +203,4 @@ sessionStorage.clear();
                     }
                 });
         });
-
 })();
