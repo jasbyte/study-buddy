@@ -53,8 +53,9 @@ sessionStorage.clear();
                             if ((dataF.records[filterId].fields.minPrijs <= record.fields.Kostprijs) && dataF.records[filterId].fields.maxPrijs >= record.fields.Kostprijs) {
                                 if ((dataF.records[filterId].fields.minOpp <= record.fields.Oppervlakte) && dataF.records[filterId].fields.maxOpp >= record.fields.Oppervlakte) {
                                     //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
-
-                                    document.getElementById("titelStad").innerText = dataF.records[filterId].fields.Stad;
+                                    if (!(dataF.records[filterId].fields.Stad === "-")){
+                                        document.getElementById("titelStad").innerText = dataF.records[filterId].fields.Stad;
+                                    }
 
                                     divFlex2 = document.createElement('div');
                                     divFlex2.setAttribute('class', 'flex-container2 flexbox');
@@ -76,11 +77,11 @@ sessionStorage.clear();
                                     divInfo.appendChild(pAdres);
 
                                     let pPrijs = document.createElement('p');
-                                    pPrijs.innerText = "€" + record.fields.Kostprijs + " / maand";
+                                    pPrijs.innerText = record.fields.Kostprijs;
                                     divInfo.appendChild(pPrijs);
 
                                     let pOpp = document.createElement('p');
-                                    pOpp.innerText = record.fields.Oppervlakte + "m²";
+                                    pOpp.innerText = record.fields.Oppervlakte;
                                     divInfo.appendChild(pOpp);
 
                                     divStars = document.createElement('div');
