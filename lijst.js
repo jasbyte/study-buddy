@@ -94,11 +94,11 @@ sessionStorage.clear();
                                         divInfo.appendChild(pAdres);
 
                                         let pPrijs = document.createElement('p');
-                                        pPrijs.innerText = record.fields.Kostprijs;
+                                        pPrijs.innerText = "€" + record.fields.Kostprijs + " / maand";
                                         divInfo.appendChild(pPrijs);
 
                                         let pOpp = document.createElement('p');
-                                        pOpp.innerText = record.fields.Oppervlakte;
+                                        pOpp.innerText = record.fields.Oppervlakte + "m²";
                                         divInfo.appendChild(pOpp);
 
                                         divStars = document.createElement('div');
