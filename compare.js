@@ -36,6 +36,9 @@
                     document.getElementById("imgKot1").src = dataK.records[compare1].fields.Afbeelding1[0].url;
                     document.getElementById("imgKot2").src = dataK.records[compare2].fields.Afbeelding1[0].url;
 
+                    document.getElementById("naamKot1").innerText = dataK.records[compare1].fields.Naam;
+                    document.getElementById("naamKot2").innerText = dataK.records[compare2].fields.Naam;
+
                     document.getElementById("prijs1").innerText = dataK.records[compare1].fields.Kostprijs;
                     document.getElementById("prijs2").innerText = dataK.records[compare2].fields.Kostprijs;
 
