@@ -21,7 +21,7 @@
             
 
 			// input shortcuts
-			var qstnaam = document.getElementById('qstnaam');
+			let qstnaam = document.getElementById('qstnaam');
             var qstfalilienaam = document.getElementById('qstfamilienaam');
             var qstbericht = document.getElementById('qstbericht');
          
@@ -40,38 +40,95 @@
 				isValid = false;
 				erremail.innerHTML = 'gelieve een geldig email in te vullen';
 				erremail.style.display = 'block';
+				qstemail.classList.remove("valid");
+				qstemail.classList.add("invalid");		
+			}
+			else {
+				erremail.style.display = "none";
+				qstemail.classList.remove("invalid");
+				qstemail.classList.add ("valid");
+			
             }
             
             // check street and number
 			if (qstnaam.value == '') {
 				isValid = false;
 				errnaam.innerHTML = 'gelieve je naam in te vullen';	
-				errnaam.style.display = 'block';		
-            }
+				errnaam.style.display = 'block';
+				qstnaam.classList.remove("valid");
+				qstnaam.classList.add("invalid");		
+			}
+			else {
+				errnaam.style.display = "none";
+				qstnaam.classList.remove("invalid");
+				qstnaam.classList.add ("valid");
+			}
 
-			// check zip
+			// check familienaam
 			if (qstfalilienaam.value == '') {
 				isValid = false;
 				errfamilienaam.innerHTML = 'gelieve je familienaam in te vullen';	
 				errfamilienaam.style.display = 'block';
-            } 
+				qstfalilienaam.classList.remove("valid");
+				qstfalilienaam.classList.add("invalid");		
+			}
+			else {
+				errfamilienaam.style.display = "none";
+				qstfalilienaam.classList.remove("invalid");
+				qstfalilienaam.classList.add ("valid");
+			}
 
-			// check city
+			// check bericht
 			if (qstbericht.value == '') {
 				isValid = false;
 				errbericht.innerHTML = 'gelieve je bericht in te geven';	
 				errbericht.style.display = 'block';
-            }
+				qstbericht.classList.remove("valid");
+				qstbericht.classList.add("invalid");		
+			}
+			else {
+				errbericht.style.display = "none";
+				qstbericht.classList.remove("invalid");
+				qstbericht.classList.add ("valid");
+			}
 
 			
 			// draw conclusion
 			if (isValid) {
-				// show thank you
-			} else {
-				// show summary
-			}
+				var naam = document.getElementById('qstnaam').value;
+				var familienaam = document.getElementById('qstfamilienaam').value;
+				var email = document.getElementById('qstemail').value;
+				var bericht = document.getElementById('qstbericht').value;
+				
+			
 
-		});
-	})
+			let data = {
+				"records": [{
+					"fields": {
+						"Naam": naam,
+						"Familienaam": familienaam,
+						"Email": email,
+						"Bericht":bericht
+					
+					}
+				}]
+			};
 
-})();
+			fetch('https://api.airtable.com/v0/appPnjWzgOvV0Rzg7/problemen',{
+				method: 'POST',
+				headers: {
+					'Authorization': 'Bearer keyqNc8YK7gvWwhpu',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			})
+			.then(response => response.json())
+						} 
+						else {
+							
+						}
+
+					});
+				})
+
+			})();
