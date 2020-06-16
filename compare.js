@@ -1,7 +1,5 @@
 ;(function () {
     let lastFilter=null;
-    let compare1;
-    let compare2;
 
     let querystring = '?sort%5B0%5D%5Bfield%5D=Date';
     querystring += '&sort%5B0%5D%5Bdirection%5D=asc';
@@ -25,6 +23,9 @@
                         lastFilter= record.fields.Id-1;
                     }
 
+                    let compare1 = sessionStorage.getItem('vergelijk1').charAt(0);
+                    let compare2 = sessionStorage.getItem('vergelijk2').charAt(0);
+
                     for(let i=0; i <= dataK.records[compare1].fields.Score; i++) {
                         document.getElementById("ster"+i).className = "fa fa-star checked";
                     }
@@ -32,9 +33,6 @@
                     for(let i=6; i <= dataK.records[compare2].fields.Score+5; i++) {
                         document.getElementById("ster"+i).className = "fa fa-star checked";
                     }
-
-                    compare1 = sessionStorage.getItem('vergelijk1').charAt(0);
-                    compare2 = sessionStorage.getItem('vergelijk2').charAt(0);
 
                     document.getElementById("imgKot1").src = dataK.records[compare1].fields.Afbeelding1;
                     document.getElementById("imgKot2").src = dataK.records[compare2].fields.Afbeelding1;
