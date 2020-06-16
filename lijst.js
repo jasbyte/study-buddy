@@ -47,7 +47,7 @@ sessionStorage.clear();
 
                     let inputBtn;
                     let compareBtn;
-                     
+
 
                     for (let record of dataK.records ) {
                         if (dataF.records[filterId].fields.Stad === record.fields.Stad || dataF.records[filterId].fields.Stad === "-") {
@@ -63,13 +63,13 @@ sessionStorage.clear();
                                     let afstand;
 
                                     if (school === "Odisee campus") {
-                                        afstand = dataK.records[filterId].fields.Odisee;
+                                        afstand = record.fields.Odisee;
                                     }
                                     if (school === "Universiteit") {
-                                        afstand = dataK.records[filterId].fields.Universiteit;
+                                        afstand = record.fields.Universiteit;
                                     }
                                     if (school === "Hogeschool") {
-                                        afstand = dataK.records[filterId].fields.Hogeschool;
+                                        afstand = record.fields.Hogeschool;
                                     }
 
                                     if (afstand <= dataF.records[filterId].fields.afstandSchool) {
