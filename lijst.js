@@ -1,6 +1,7 @@
 let id = 0;
 let curId=null;
-
+let vergelijk=0;
+sessionStorage.clear();
 ;(function() {
     'use strict'
     let querystring = '?sort%5B0%5D%5Bfield%5D=Date';
@@ -45,6 +46,7 @@ let curId=null;
                     let spanStar5;
 
                     let inputBtn;
+                    let compareBtn;
 
                     for (let record of dataK.records ) {
                         if (dataF.records[filterId].fields.Stad === record.fields.Stad) {
@@ -53,7 +55,8 @@ let curId=null;
                                     //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
 
                                     divFlex2 = document.createElement('div');
-                                    divFlex2.setAttribute('class', 'flex-container2 flexbox');
+                                    divFlex2.setAttribute('class', 'flex-container2');
+                                    divFlex2.setAttribute('class', 'flexbox');
                                     divFlex1.appendChild(divFlex2);
 
                                     divImg = document.createElement('div');
@@ -180,6 +183,20 @@ let curId=null;
                                     inputBtn.setAttribute("onClick", "curId=id;sessionStorage.setItem('id', id);window.location.href = 'detail.html';");
                                     divInfo.appendChild(inputBtn);
 
+                                    compareBtn = document.createElement('input');
+                                    compareBtn.setAttribute('type', 'submit');
+                                    compareBtn.setAttribute('id', id);
+                                    compareBtn.setAttribute('value', 'Vergelijk');
+                                    vergelijk=0;
+                                    compareBtn.setAttribute("onClick", "vergelijk++;\n" +
+                                        "        sessionStorage.setItem('vergelijk'+vergelijk, id);\n" +
+                                        "        alert(id);\n" +
+                                        "        if (vergelijk > 1) {\n" +
+                                        "            alert(\"heloow\");\n" +
+                                        "            window.location.href = \"compare.html\";\n" +
+                                        "        }");
+                                    //vergelijk++;sessionStorage.setItem('vergelijk'+vergelijk+'', vergelijk);alert('hey');console.log(vergelijk);
+                                    divInfo.appendChild(compareBtn);
                                 }
                             }
                         }
@@ -187,4 +204,5 @@ let curId=null;
                     }
                 });
         });
+
 })();
