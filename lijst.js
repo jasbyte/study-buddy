@@ -49,7 +49,7 @@ sessionStorage.clear();
                     let compareBtn;
 
                     for (let record of dataK.records ) {
-                        if (dataF.records[filterId].fields.Stad === record.fields.Stad) {
+                        if (dataF.records[filterId].fields.Stad === record.fields.Stad || dataF.records[filterId].fields.Stad === "-") {
                             if ((dataF.records[filterId].fields.minPrijs <= record.fields.Kostprijs) && dataF.records[filterId].fields.maxPrijs >= record.fields.Kostprijs) {
                                 if ((dataF.records[filterId].fields.minOpp <= record.fields.Oppervlakte) && dataF.records[filterId].fields.maxOpp >= record.fields.Oppervlakte) {
                                     //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
@@ -84,7 +84,7 @@ sessionStorage.clear();
                                     divStars = document.createElement('div');
                                     divStars.setAttribute('class', 'stars');
                                     divInfo.appendChild(divStars);
-                                    
+
                                     if (record.fields.Score>=1) {
                                         spanStar1 = document.createElement('span');
                                         spanStar1.setAttribute('class', 'fa fa-star checked');
@@ -185,13 +185,13 @@ sessionStorage.clear();
 
                                     compareBtn = document.createElement('input');
                                     compareBtn.setAttribute('type', 'submit');
-                                    compareBtn.setAttribute('id', id);
+                                    compareBtn.setAttribute('id', id+"verg");
                                     compareBtn.setAttribute('value', 'Vergelijk');
                                     vergelijk=0;
                                     compareBtn.setAttribute("onClick", "vergelijk++;\n" +
                                         "                        sessionStorage.setItem('vergelijk'+vergelijk, id);\n" +
+                                        "                        document.getElementById(id).disabled = true;\n" +
                                         "                        if (vergelijk > 1) {\n" +
-                                        "                            document.getElementById(id).disabled = true;\n" +
                                         "                            window.location.href = \"compare.html\";\n" +
                                         "                        }");
                                     //vergelijk++;sessionStorage.setItem('vergelijk'+vergelijk+'', vergelijk);alert('hey');console.log(vergelijk);
