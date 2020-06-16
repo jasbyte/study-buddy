@@ -46,7 +46,8 @@ header h1 {
 
 .flexbox input {
     margin-left: 20px;
-    width: 185px;
+    margin-top: 10px;
+    width: 90%;
     height: 20px;
     color: #FFFFFF;
     background-color: #C73333;
@@ -88,6 +89,12 @@ p , .stars{
 
 .info {
     margin-top: 18px;
+}
+
+input[type=submit]:disabled {
+    background-color: transparent;
+    border: 1px solid #C73333;
+    color: #C73333;
 }
 
 @media only screen and (max-width: 420px) {
