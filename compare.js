@@ -22,11 +22,8 @@
                         lastFilter= record.fields.Id-1;
                     }
 
-                    compare1 = sessionStorage.getItem('vergelijk1');
-                    compare2 = sessionStorage.getItem('vergelijk2');
-
-                    console.log(compare1);
-                    console.log(compare2);
+                    compare1 = sessionStorage.getItem('vergelijk1').charAt(0);
+                    compare2 = sessionStorage.getItem('vergelijk2').charAt(0);
 
                     document.getElementById("rating1").innerText = dataK.records[compare1].fields.Score;
                     document.getElementById("rating2").innerText = dataK.records[compare2].fields.Score;
@@ -38,6 +35,7 @@
                     document.getElementById("opp2").innerText = dataK.records[compare2].fields.Oppervlakte;
 
                     let school = dataF.records[lastFilter].fields.School;
+
                     if (school === "Odisee campus") {
                         document.getElementById("afstand1").innerText = dataK.records[compare1].fields.Odisee;
                         document.getElementById("afstand2").innerText = dataK.records[compare2].fields.Odisee;
