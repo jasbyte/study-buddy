@@ -47,77 +47,107 @@ sessionStorage.clear();
 
                     let inputBtn;
                     let compareBtn;
+                     
 
                     for (let record of dataK.records ) {
                         if (dataF.records[filterId].fields.Stad === record.fields.Stad || dataF.records[filterId].fields.Stad === "-") {
                             if ((dataF.records[filterId].fields.minPrijs <= record.fields.Kostprijs) && dataF.records[filterId].fields.maxPrijs >= record.fields.Kostprijs) {
                                 if ((dataF.records[filterId].fields.minOpp <= record.fields.Oppervlakte) && dataF.records[filterId].fields.maxOpp >= record.fields.Oppervlakte) {
                                     //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
-                                    if (!(dataF.records[filterId].fields.Stad === "-")){
+                                    if (!(dataF.records[filterId].fields.Stad === "-")) {
                                         document.getElementById("titelStad").innerText = dataF.records[filterId].fields.Stad;
                                     }
 
-                                    divFlex2 = document.createElement('div');
-                                    divFlex2.setAttribute('class', 'flex-container2 flexbox');
-                                    divFlex1.appendChild(divFlex2);
 
-                                    divImg = document.createElement('div');
-                                    let img = new Image();
-                                    img.src = record.fields.Afbeelding1[0].url;
-                                    img.setAttribute('alt', 'Foto van studentenkot');
-                                    divImg.appendChild(img);
-                                    divFlex2.appendChild(divImg);
+                                    let school = dataF.records[lastFilter].fields.School;
+                                    let afstand;
 
-                                    let divInfo = document.createElement('div');
-                                    divInfo.setAttribute('class', 'info');
-                                    divFlex2.appendChild(divInfo);
+                                    if (school === "Odisee campus") {
+                                        afstand = dataK.records[filterId].fields.Odisee;
+                                    }
+                                    if (school === "Universiteit") {
+                                        afstand = dataK.records[filterId].fields.Universiteit;
+                                    }
+                                    if (school === "Hogeschool") {
+                                        afstand = dataK.records[filterId].fields.Hogeschool;
+                                    }
 
-                                    let pAdres = document.createElement('p');
-                                    pAdres.innerText = record.fields.Adres;
-                                    divInfo.appendChild(pAdres);
+                                    if (afstand <= dataF.records[filterId].fields.afstandSchool) {
 
-                                    let pPrijs = document.createElement('p');
-                                    pPrijs.innerText = record.fields.Kostprijs;
-                                    divInfo.appendChild(pPrijs);
+                                        divFlex2 = document.createElement('div');
+                                        divFlex2.setAttribute('class', 'flex-container2 flexbox');
+                                        divFlex1.appendChild(divFlex2);
 
-                                    let pOpp = document.createElement('p');
-                                    pOpp.innerText = record.fields.Oppervlakte;
-                                    divInfo.appendChild(pOpp);
+                                        divImg = document.createElement('div');
+                                        let img = new Image();
+                                        img.src = record.fields.Afbeelding1[0].url;
+                                        img.setAttribute('alt', 'Foto van studentenkot');
+                                        divImg.appendChild(img);
+                                        divFlex2.appendChild(divImg);
 
-                                    divStars = document.createElement('div');
-                                    divStars.setAttribute('class', 'stars');
-                                    divInfo.appendChild(divStars);
+                                        let divInfo = document.createElement('div');
+                                        divInfo.setAttribute('class', 'info');
+                                        divFlex2.appendChild(divInfo);
 
-                                    if (record.fields.Score>=1) {
-                                        spanStar1 = document.createElement('span');
-                                        spanStar1.setAttribute('class', 'fa fa-star checked');
-                                        divStars.appendChild(spanStar1);
+                                        let pAdres = document.createElement('p');
+                                        pAdres.innerText = record.fields.Adres;
+                                        divInfo.appendChild(pAdres);
 
-                                        if (record.fields.Score>=2) {
-                                            spanStar2 = document.createElement('span');
-                                            spanStar2.setAttribute('class', 'fa fa-star checked');
-                                            divStars.appendChild(spanStar2);
+                                        let pPrijs = document.createElement('p');
+                                        pPrijs.innerText = record.fields.Kostprijs;
+                                        divInfo.appendChild(pPrijs);
 
-                                            if (record.fields.Score>=3) {
-                                                spanStar3 = document.createElement('span');
-                                                spanStar3.setAttribute('class', 'fa fa-star checked');
-                                                divStars.appendChild(spanStar3);
+                                        let pOpp = document.createElement('p');
+                                        pOpp.innerText = record.fields.Oppervlakte;
+                                        divInfo.appendChild(pOpp);
 
-                                                if (record.fields.Score>=4) {
-                                                    spanStar4 = document.createElement('span');
-                                                    spanStar4.setAttribute('class', 'fa fa-star checked');
-                                                    divStars.appendChild(spanStar4);
+                                        divStars = document.createElement('div');
+                                        divStars.setAttribute('class', 'stars');
+                                        divInfo.appendChild(divStars);
 
-                                                    if (record.fields.Score>=5) {
-                                                        spanStar5 = document.createElement('span');
-                                                        spanStar5.setAttribute('class', 'fa fa-star checked');
-                                                        divStars.appendChild(spanStar5);
+                                        if (record.fields.Score >= 1) {
+                                            spanStar1 = document.createElement('span');
+                                            spanStar1.setAttribute('class', 'fa fa-star checked');
+                                            divStars.appendChild(spanStar1);
+
+                                            if (record.fields.Score >= 2) {
+                                                spanStar2 = document.createElement('span');
+                                                spanStar2.setAttribute('class', 'fa fa-star checked');
+                                                divStars.appendChild(spanStar2);
+
+                                                if (record.fields.Score >= 3) {
+                                                    spanStar3 = document.createElement('span');
+                                                    spanStar3.setAttribute('class', 'fa fa-star checked');
+                                                    divStars.appendChild(spanStar3);
+
+                                                    if (record.fields.Score >= 4) {
+                                                        spanStar4 = document.createElement('span');
+                                                        spanStar4.setAttribute('class', 'fa fa-star checked');
+                                                        divStars.appendChild(spanStar4);
+
+                                                        if (record.fields.Score >= 5) {
+                                                            spanStar5 = document.createElement('span');
+                                                            spanStar5.setAttribute('class', 'fa fa-star checked');
+                                                            divStars.appendChild(spanStar5);
+                                                        } else {
+                                                            spanStar5 = document.createElement('span');
+                                                            spanStar5.setAttribute('class', 'fa fa-star');
+                                                            divStars.appendChild(spanStar5);
+                                                        }
                                                     } else {
+                                                        spanStar4 = document.createElement('span');
+                                                        spanStar4.setAttribute('class', 'fa fa-star');
+                                                        divStars.appendChild(spanStar4);
+
                                                         spanStar5 = document.createElement('span');
                                                         spanStar5.setAttribute('class', 'fa fa-star');
                                                         divStars.appendChild(spanStar5);
                                                     }
                                                 } else {
+                                                    spanStar3 = document.createElement('span');
+                                                    spanStar3.setAttribute('class', 'fa fa-star');
+                                                    divStars.appendChild(spanStar3);
+
                                                     spanStar4 = document.createElement('span');
                                                     spanStar4.setAttribute('class', 'fa fa-star');
                                                     divStars.appendChild(spanStar4);
@@ -127,6 +157,10 @@ sessionStorage.clear();
                                                     divStars.appendChild(spanStar5);
                                                 }
                                             } else {
+                                                spanStar2 = document.createElement('span');
+                                                spanStar2.setAttribute('class', 'fa fa-star');
+                                                divStars.appendChild(spanStar2);
+
                                                 spanStar3 = document.createElement('span');
                                                 spanStar3.setAttribute('class', 'fa fa-star');
                                                 divStars.appendChild(spanStar3);
@@ -140,6 +174,10 @@ sessionStorage.clear();
                                                 divStars.appendChild(spanStar5);
                                             }
                                         } else {
+                                            spanStar1 = document.createElement('span');
+                                            spanStar1.setAttribute('class', 'fa fa-star');
+                                            divStars.appendChild(spanStar1);
+
                                             spanStar2 = document.createElement('span');
                                             spanStar2.setAttribute('class', 'fa fa-star');
                                             divStars.appendChild(spanStar2);
@@ -156,49 +194,29 @@ sessionStorage.clear();
                                             spanStar5.setAttribute('class', 'fa fa-star');
                                             divStars.appendChild(spanStar5);
                                         }
-                                    } else {
-                                        spanStar1 = document.createElement('span');
-                                        spanStar1.setAttribute('class', 'fa fa-star');
-                                        divStars.appendChild(spanStar1);
 
-                                        spanStar2 = document.createElement('span');
-                                        spanStar2.setAttribute('class', 'fa fa-star');
-                                        divStars.appendChild(spanStar2);
+                                        inputBtn = document.createElement('input');
+                                        inputBtn.setAttribute('type', 'submit');
+                                        inputBtn.setAttribute('id', id);
+                                        inputBtn.setAttribute('value', 'Bekijk');
 
-                                        spanStar3 = document.createElement('span');
-                                        spanStar3.setAttribute('class', 'fa fa-star');
-                                        divStars.appendChild(spanStar3);
+                                        inputBtn.setAttribute("onClick", "curId=id;sessionStorage.setItem('id', id);window.location.href = 'detail.html';");
+                                        divInfo.appendChild(inputBtn);
 
-                                        spanStar4 = document.createElement('span');
-                                        spanStar4.setAttribute('class', 'fa fa-star');
-                                        divStars.appendChild(spanStar4);
-
-                                        spanStar5 = document.createElement('span');
-                                        spanStar5.setAttribute('class', 'fa fa-star');
-                                        divStars.appendChild(spanStar5);
+                                        compareBtn = document.createElement('input');
+                                        compareBtn.setAttribute('type', 'submit');
+                                        compareBtn.setAttribute('id', id + "verg");
+                                        compareBtn.setAttribute('value', 'Vergelijk');
+                                        vergelijk = 0;
+                                        compareBtn.setAttribute("onClick", "vergelijk++;\n" +
+                                            "                        sessionStorage.setItem('vergelijk'+vergelijk, id);\n" +
+                                            "                        document.getElementById(id).disabled = true;\n" +
+                                            "                        if (vergelijk > 1) {\n" +
+                                            "                            window.location.href = \"compare.html\";\n" +
+                                            "                        }");
+                                        //vergelijk++;sessionStorage.setItem('vergelijk'+vergelijk+'', vergelijk);alert('hey');console.log(vergelijk);
+                                        divInfo.appendChild(compareBtn);
                                     }
-
-                                    inputBtn = document.createElement('input');
-                                    inputBtn.setAttribute('type', 'submit');
-                                    inputBtn.setAttribute('id', id);
-                                    inputBtn.setAttribute('value', 'Bekijk');
-
-                                    inputBtn.setAttribute("onClick", "curId=id;sessionStorage.setItem('id', id);window.location.href = 'detail.html';");
-                                    divInfo.appendChild(inputBtn);
-
-                                    compareBtn = document.createElement('input');
-                                    compareBtn.setAttribute('type', 'submit');
-                                    compareBtn.setAttribute('id', id+"verg");
-                                    compareBtn.setAttribute('value', 'Vergelijk');
-                                    vergelijk=0;
-                                    compareBtn.setAttribute("onClick", "vergelijk++;\n" +
-                                        "                        sessionStorage.setItem('vergelijk'+vergelijk, id);\n" +
-                                        "                        document.getElementById(id).disabled = true;\n" +
-                                        "                        if (vergelijk > 1) {\n" +
-                                        "                            window.location.href = \"compare.html\";\n" +
-                                        "                        }");
-                                    //vergelijk++;sessionStorage.setItem('vergelijk'+vergelijk+'', vergelijk);alert('hey');console.log(vergelijk);
-                                    divInfo.appendChild(compareBtn);
                                 }
                             }
                         }
