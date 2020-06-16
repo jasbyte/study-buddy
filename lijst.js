@@ -53,8 +53,7 @@ let curId=null;
                                     //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
 
                                     divFlex2 = document.createElement('div');
-                                    divFlex2.setAttribute('class', 'flex-container2');
-                                    divFlex2.setAttribute('class', 'flexbox');
+                                    divFlex2.setAttribute('class', 'flex-container2 flexbox');
                                     divFlex1.appendChild(divFlex2);
 
                                     divImg = document.createElement('div');
