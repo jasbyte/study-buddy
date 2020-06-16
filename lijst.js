@@ -59,7 +59,7 @@ sessionStorage.clear();
                                     }
 
 
-                                    let school = dataF.records[lastFilter].fields.School;
+                                    let school = dataF.records[filterId].fields.School;
                                     let afstand;
 
                                     if (school === "Odisee campus") {
