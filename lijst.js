@@ -63,7 +63,7 @@ sessionStorage.clear();
                                         document.getElementById("titelStad").innerText = dataF.records[filterId].fields.Stad;
                                     }
 
-
+                                    
                                     let school = dataF.records[filterId].fields.School;
                                     let afstand;
 
@@ -77,7 +77,7 @@ sessionStorage.clear();
                                         afstand = record.fields.Hogeschool;
                                     }
 
-                                    if (afstand <= dataF.records[filterId].fields.afstandSchool || dataF.records[filterId].fields.School === "-") {
+                                    if (afstand <= dataF.records[filterId].fields.afstandSchool || dataF.records[filterId].fields.School === "") {
                                         count++;
                                         divFlex2 = document.createElement('div');
                                         divFlex2.setAttribute('class', 'flex-container2 flexbox');
