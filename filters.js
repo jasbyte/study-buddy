@@ -13,7 +13,7 @@ document.getElementById('btnhelp').addEventListener("click", function () {
 })
 
 document.getElementById('stad').addEventListener('change', function () {
-    if(city.value != '-'){
+    if(city.value != ''){
         document.getElementById('city').style.borderColor = "black";
     }
     else {
@@ -22,7 +22,7 @@ document.getElementById('stad').addEventListener('change', function () {
 })
 
 document.getElementById('school').addEventListener('change', function () {
-    if((school.value != '-')){
+    if((school.value != '')){
         document.getElementById('schoolId').style.borderColor = "black";
     }
     else{
