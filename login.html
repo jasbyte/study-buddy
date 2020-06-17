@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/registratie.css" type="text/css">
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+</head>
+<body>
+<header>
+    <img src="../img/return.png" alt="previous icon" id = "previous">
+    <h1>LOGIN</h1>
+
+</header>
+<main>
+    <form id="form1">
+        <div id="summary">
+            Het formulier is onvolledig ingevuld en/of bevat fouten. Gelieve dit te corrigeren en opnieuw te proberen.
+        </div>
+
+        <fieldset>
+            <div class="email">
+                <label for="qstEmail">Email adres</label>
+                <input type="email" id="qstEmail" value="" required />
+                <span class="message message--error" id="erremail">&nbsp;</span>
+            </div>
+            <div class="wachtwoord">
+                <label for="qstwachtwoord">Wachtwoord</label>
+                <input type="password" id="qstwachtwoord" value="" required />
+                <span class="message message--error" id="errwachtwoord">&nbsp;</span>
+            </div>
+
+        </fieldset>
+        <div class="buttons clearfix">
+            <input type="button" id="btnSubmit" value="Login" />
+        </div>
+        <div class="buttons clearfix">
+            <input type="button" id="btnRegistreer" value="Registreer" />
+        </div>
+    </form>
+    <div id = "thankyou">
+        <h1>U bent ingelogd!</h1>
+        <div id="thankyou__message">
+            U bent correct ingelogd, klik op de knop home op terug te keren naar de homepagina
+        </div>
+        <div class="buttons clearfix">
+            <input type="submit" id="home" value="Home" />
+        </div>
+    </div>
+</main>
+<script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOT FINDR</title>
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>KOT FINDR</h1>
+    <button id = "login" class="btn">Login</button>
+</header>
+<main>
+    <div class="flex-container">
+        <div class="flex-container2 flexbox" id = "city">
+            <div>
+                <img src="../img/city.png" alt = "city icon">
+            </div>
+            <div class="flex-container3">
+                <label for="stad">In welke stad zoekt u een kot?</label>
+
+                <select id="stad" required>
+                    <option  value="">kies...</option>
+                    <option value="Gent">Gent</option>
+                    <option value="Antwerpen">Antwerpen</option>
+                    <option value="Brussel">Brussel</option>
+                    <option value="Hasselt">Hasselt</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="flex-container2 flexbox" id="schoolId">
+            <div>
+                <img src="../img/school.png" alt = "school icon">
+            </div>
+            <div class="flex-container3">
+                <label for="school">In de buurt van welke school zoekt u een kot?</label>
+
+                <select id="school" required>
+                    <option value="">kies...</option>
+                    <option value="Odisee campus">Odisee campus</option>
+                    <option value="Universiteit">Universiteit</option>
+                    <option value="Hogeschool">Hogeschool</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex-container2 flexbox " id="prijsId">
+            <div>
+                <img src="../img/geld.png" alt = "money icon">
+            </div>
+            <div class="flex-container3">
+                <label>Wat mag het kosten?</label>
+                <div class="minmax">
+                    <label for = "minprijs">Min.</label>
+                    <input id = "minprijs" type="number" min = "0">
+                    <label for = "maxprijs" >Max</label>
+                    <input id = "maxprijs" type="number" min = "200">
+                </div>
+            </div>
+
+            <span class="message message--error" id="errprijsklasse">&nbsp;</span>
+        </div>
+
+        <div class="flex-container2 flexbox " id="surfaceId">
+            <div>
+                <img src="../img/opp.png" alt = "surface icon">
+            </div>
+            <div class="flex-container3">
+                <label>Hoe groot mag het kot zijn?</label>
+                <div class="sur">
+                    <label for = "surfaceMin" >Min.</label>
+                    <input id = "surfaceMin" type="number" min="0">
+                    <label>m²</label>
+                    <label for = "surfaceMax" id = "max">Max</label>
+                    <input id = "surfaceMax" type="number" min = "15">
+                    <label>m²</label>
+                </div>
+            </div>
+
+            <span class="message message--error" id="errOpp">&nbsp;</span>
+        </div>
+
+        <div class="flexbox flex-container2" id="distanceId">
+            <div>
+                <img src="../img/dis.png" alt = "distance icon">
+            </div>
+            <div class="flex-container3">
+                <label for="distance">Hoe ver mag uw kot verwijderd zijn van uw school in km?</label>
+                <input type="range" min="0" max="15" class="slider" id = "distance" >
+                <p id = "range"></p>
+            </div>
+
+            <span class="message message--error" id="errdistence">&nbsp;</span>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="btn2" id="btnreset">Reset</button>
+        <button class="btn2" id="btnbevestig">Bevestig</button>
+        <button class="btn2" id="btnhelp">Help</button>
+    </div>
+</main>
+<script type="text/javascript" src="../js/filters.js"></script>
+</body>
+</html>

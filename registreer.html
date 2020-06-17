@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registreer</title>
+    <link rel="stylesheet" type="text/css" href="../css/registratie.css">
+</head>
+<body>
+<header>
+    <img src="../img/return.png" alt="previous icon" id = "previous">
+    <h1>GENT</h1>
+</header>
+<main>
+    <form id="form1">
+        <div id="summary">
+            Het formulier is onvolledig ingevuld en/of bevat fouten. Gelieve dit te corrigeren en opnieuw te proberen.
+        </div>
+
+        <fieldset>
+            <div class="qstn qstn1">
+                <label for="qstName">Naam *</label>
+                <input type="text" id="qstName" value="" required />
+                <span class="message message--error" id="errName"> </span>
+            </div>
+            <div class="qstn qstn2">
+                <label for="qstEmail">Email adress*</label>
+                <input type="email" id="qstEmail" value="" required />
+                <span class="message message--error" id="errEmail"> </span>
+            </div>
+            <div class="qstn qstn3">
+                <label for="qstPassword">Wachtwoord*</label>
+                <input type="password" id="qstPassword" value="" required />
+                <span class="message message--error" id="errPassword"> </span>
+            </div>
+            <div class="qstn qstn4">
+                <label for="qstPassword2">Wachtwoord bevestigen*</label>
+                <input type="password" id="qstPassword2" value="" required />
+                <span class="message message--error" id="errPassword2"> </span>
+            </div>
+            <div class="qstn qstn5">
+                <label for="qstZIP">Postcode*</label>
+                <input type="number" id="qstZIP" value="" required />
+                <span class="message message--error" id="errZIP"> </span>
+            </div>
+            <div class="qstn qstn6">
+                <label for="qstCity">Stad*</label>
+                <input type="text" id="qstCity" value="" required />
+                <span class="message message--error" id="errCity"> </span>
+            </div>
+            <div class="qstn qstn7">
+                <label for="qstAdres">Adres (straat + huisnummer)*</label>
+                <input type="text" id="qstAdres" value="" required />
+                <span class="message message--error" id="errAdres"> </span>
+            </div>
+            <div class="qstn qstn8">
+                <label for="qstBirthdate">Geboortedatum (DD-MM-JJJJ)*</label>
+                <input type="text" id="qstBirthdate" value="" required />
+                <span class="message message--error" id="errBirthdate">&nbsp;</span>
+            </div>
+        </fieldset>
+        <div class="buttons clearfix">
+            <input type="submit" id="btnSubmit" value="Registreren" />
+        </div>
+    </form>
+    <div id = "thankyou">
+        <h1>Bedankt!</h1>
+        <div id="thankyou__message">
+            Je registratie is voltooid. Over enkele ogenblikken zul je een e-mail ontvangen met verdere instructies.
+        </div>
+    </div>
+    <script src="../js/registreer.js" type="text/javascript"></script>
+</main>
+</body>
+</html>
