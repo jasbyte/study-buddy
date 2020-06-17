@@ -70,8 +70,8 @@ document.getElementById('login').addEventListener("click", function () {
 })
 
 document.getElementById('btnreset').addEventListener("click", function(){
-    city.value = '-';
-    school.value = '-';
+    city.value = '';
+    school.value = '';
     minPrice.value = '';
     maxPrice.value = '';
     minSurface.value = '';
