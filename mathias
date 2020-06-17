@@ -18,6 +18,7 @@
 			e.stopPropagation();
 			e.stopPropagation();
 			e.stopPropagation();
+			e.stopPropagation();
 			e.stopPropagation();e.stopPropagation();
 
 			// form checking
