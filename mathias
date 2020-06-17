@@ -1,1 +1,72 @@
+;(function()} {
+    let qstEmail = document.getElementById('qstEmail');
+    let qstpas = document.getElementById('qstwachtwoord');
+    
+    let errEmail = document.getElementById('erremail');
+    let errPass = document.getElementById('errwachtwoord');
+    
+    let valid = true;
+    
+    document.getElementById('btnSubmit').addEventListener('click', function () {
+    
+        console.log(1)
+        if (qstEmail.value == '') {
+            valid = false;
+            console.log('fout')
+            errEmail.innerText = 'Gelieve een  e-mail adres in te geven'
+            errEmail.style.display = 'block';
+            //document.getElementById('qstEmail').classList.add('invalid');
+        }
+    
+        else {
+           errEmail.style.display = 'none';
+            //document.getElementById('qstEmail').classList.add('valid');
+        }
+    
+        console.log(2)
+        if (qstwachtwoord.value == '') {
+            valid = false;
+            console.log('fout')
+            errPass.innerText = 'Gelieve een wachtwoord in te geven'
+            errPass.style.display = 'block';
+            //document.getElementById('qstwachtwoord').classList.add('invalid');
+        }
+    
+        else {
+            errPass.style.display = 'none';
+            //document.getElementById('qstwachtwoord').classList.add('valid'); 
+        }
+    
+        console.log(3)
+        if (valid) {
+            console.log(4)
+            fetch('https://api.airtable.com/v0/appPnjWzgOvV0Rzg7/gebruikers', {
+                headers: {
+                    'Authorization': 'Bearer keyH4XW3gE9fpPWle'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    for (let i = 0; i < data.records.length; i++) {
+                        if (qstEmail.value === data.records[i].fields.Email) {
+                            if (qstpas.value === data.records[i].fields.wachtwoord) {
+                                alert('ingelogd')
+                            }
+                            else {
+                                alert('fout passwoord')
+                            }
+                        }
+                    }
+                });
+        }
+        else {
+            alert ("hhhhh")
+        }
+    
+    });
+})
+
+
+
 
