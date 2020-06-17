@@ -52,7 +52,7 @@ sessionStorage.clear();
 
                     let inputBtn;
                     let compareBtn;
-					let count = 0;
+                    let count = 0;
 
                     for (let record of dataK.records ) {
                         if (dataF.records[filterId].fields.Stad === record.fields.Stad || dataF.records[filterId].fields.Stad === "") {
@@ -79,7 +79,7 @@ sessionStorage.clear();
 
                                     if (afstand <= dataF.records[filterId].fields.afstandSchool || dataF.records[filterId].fields.School === "-") {
                                         count++;
-										divFlex2 = document.createElement('div');
+                                        divFlex2 = document.createElement('div');
                                         divFlex2.setAttribute('class', 'flex-container2 flexbox');
                                         divFlex1.appendChild(divFlex2);
 
@@ -222,17 +222,17 @@ sessionStorage.clear();
                                         //vergelijk++;sessionStorage.setItem('vergelijk'+vergelijk+'', vergelijk);alert('hey');console.log(vergelijk);
                                         divInfo.appendChild(compareBtn);
                                     }
-									
+
                                 }
                             }
                         }
-						
+
                         id++;
                     }
-				if (count == 0) {
-					alert('Sorry wij hebben geen koten die voldoen aan de door u ingestelde filters')
-					window.location.href = "index.html"
-				}
+                    if (count == 0) {
+                        alert('Sorry wij hebben geen koten die voldoen aan de door u ingestelde filters')
+                        window.location.href = "index.html"
+                    }
                 });
         });
 })();

@@ -1,4 +1,9 @@
 ;(function () {
+
+    document.getElementById('previous').addEventListener("click", function () {
+        window.location.href = "lijst.html"
+    })
+
     fetch('https://api.airtable.com/v0/appPnjWzgOvV0Rzg7/Koten', {
         headers : {
             'Authorization' : 'Bearer keyRvDws7vyY80guN'
@@ -62,14 +67,6 @@
                 document.getElementById("ster4").className = "fa fa-star";
                 document.getElementById("ster5").className = "fa fa-star";
             }
-
-            document.getElementById("login").addEventListener('click', function () {
-                window.location.href = "login.html";
-            });
-
-            document.getElementById("back").addEventListener('click', function () {
-                window.location.href = "lijst.html";
-            });
 
             document.getElementById("prev").addEventListener('click', function () {
                 plusSlides(-1);

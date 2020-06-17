@@ -1,6 +1,10 @@
 ;(function () {
     let lastFilter=null;
 
+    document.getElementById('previous').addEventListener("click", function () {
+        window.history.back();
+    })
+
     let querystring = '?sort%5B0%5D%5Bfield%5D=Date';
     querystring += '&sort%5B0%5D%5Bdirection%5D=asc';
 
@@ -48,16 +52,23 @@
                     let school = dataF.records[lastFilter].fields.School;
 
                     if (school === "Odisee campus") {
+                        //document.getElementById('schoolAfstand').style.display = "block"
                         document.getElementById("afstand1").innerText = dataK.records[compare1].fields.Odisee;
                         document.getElementById("afstand2").innerText = dataK.records[compare2].fields.Odisee;
                     }
                     if (school === "Universiteit") {
+                        //document.getElementById('schoolAfstand').style.display = "block"
                         document.getElementById("afstand1").innerText = dataK.records[compare1].fields.Universiteit;
                         document.getElementById("afstand2").innerText = dataK.records[compare2].fields.Universiteit;
                     }
                     if (school === "Hogeschool") {
+                        //document.getElementById('schoolAfstand').style.display = "block"
                         document.getElementById("afstand1").innerText = dataK.records[compare1].fields.Hogeschool;
                         document.getElementById("afstand2").innerText = dataK.records[compare2].fields.Hogeschool;
+                    }
+
+                    if (school === "-"){
+                        document.getElementById('schoolAfstand').style.display = "none";
                     }
 
                     document.getElementById("adres1").innerText = dataK.records[compare1].fields.Adres;
