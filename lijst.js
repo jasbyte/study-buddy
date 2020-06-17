@@ -4,6 +4,11 @@ let vergelijk=0;
 sessionStorage.clear();
 ;(function() {
     'use strict'
+
+    document.getElementById('previous').addEventListener("click", function () {
+        window.location.href = "index.html"
+    })
+
     let querystring = '?sort%5B0%5D%5Bfield%5D=Date';
     querystring += '&sort%5B0%5D%5Bdirection%5D=asc';
     fetch('https://api.airtable.com/v0/appPnjWzgOvV0Rzg7/Koten', {
@@ -47,14 +52,14 @@ sessionStorage.clear();
 
                     let inputBtn;
                     let compareBtn;
-
+					let count = 0;
 
                     for (let record of dataK.records ) {
-                        if (dataF.records[filterId].fields.Stad === record.fields.Stad || dataF.records[filterId].fields.Stad === "-") {
+                        if (dataF.records[filterId].fields.Stad === record.fields.Stad || dataF.records[filterId].fields.Stad === "") {
                             if ((dataF.records[filterId].fields.minPrijs <= record.fields.Kostprijs) && dataF.records[filterId].fields.maxPrijs >= record.fields.Kostprijs) {
                                 if ((dataF.records[filterId].fields.minOpp <= record.fields.Oppervlakte) && dataF.records[filterId].fields.maxOpp >= record.fields.Oppervlakte) {
-                                    //alert(record.fields.Stad+", "+record.fields.Kostprijs+", "+record.fields.Oppervlakte);
-                                    if (!(dataF.records[filterId].fields.Stad === "-")) {
+                                    //
+                                    if (!(dataF.records[filterId].fields.Stad === "")) {
                                         document.getElementById("titelStad").innerText = dataF.records[filterId].fields.Stad;
                                     }
 
@@ -72,9 +77,9 @@ sessionStorage.clear();
                                         afstand = record.fields.Hogeschool;
                                     }
 
-                                    if (afstand <= dataF.records[filterId].fields.afstandSchool) {
-
-                                        divFlex2 = document.createElement('div');
+                                    if (afstand <= dataF.records[filterId].fields.afstandSchool || dataF.records[filterId].fields.School === "-") {
+                                        count++;
+										divFlex2 = document.createElement('div');
                                         divFlex2.setAttribute('class', 'flex-container2 flexbox');
                                         divFlex1.appendChild(divFlex2);
 
@@ -217,11 +222,16 @@ sessionStorage.clear();
                                         //vergelijk++;sessionStorage.setItem('vergelijk'+vergelijk+'', vergelijk);alert('hey');console.log(vergelijk);
                                         divInfo.appendChild(compareBtn);
                                     }
+									
                                 }
                             }
                         }
+						
                         id++;
                     }
+				if (count == 0) {
+					alert('Sorry wij hebben geen koten die voldoen aan de door u ingestelde filters')
+				}
                 });
         });
 })();
