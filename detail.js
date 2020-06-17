@@ -20,7 +20,7 @@
             document.getElementById("adres").innerText = data.records[id].fields.Adres;
             document.getElementById("prijs").innerText = "€"+data.records[id].fields.Kostprijs+" / maand";
             document.getElementById("opp").innerText = data.records[id].fields.Oppervlakte+"m²";
-            document.getElementById("kaart").src = data.records[id].fields.Kaart;
+            document.getElementById("kaart").src = data.records[id].fields.iframe;
             document.getElementById("omschrijving").innerText = data.records[id].fields.Omschrijving;
 
             if (data.records[id].fields.Score>=1) {
