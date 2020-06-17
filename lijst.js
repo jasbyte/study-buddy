@@ -231,6 +231,7 @@ sessionStorage.clear();
                     }
 				if (count == 0) {
 					alert('Sorry wij hebben geen koten die voldoen aan de door u ingestelde filters')
+					window.location.href = "index.html"
 				}
                 });
         });
