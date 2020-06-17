@@ -97,6 +97,15 @@ input[type=submit]:disabled {
     color: #C73333;
 }
 
+#previous {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: none;
+}
+
 @media only screen and (max-width: 420px) {
     header h1 {
         font-size: 42px;
@@ -140,7 +149,7 @@ input[type=submit]:disabled {
     .flexbox {
         padding-right: 30px;
         padding-left: 30px;
-        height: 150px;
+        height: 200px;
     }
 
     .info {

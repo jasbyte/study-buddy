@@ -54,21 +54,8 @@ p, div.qstn {
     display: table;
 }
 
-/* ===========================================
-	General
-	=========================================== */
 
-/* elements */
-
-
-
-/* ===========================================
-	Form styles
-	=========================================== */
-
-/* elements */
-
-form, #thankyou {
+form, #thankyou, #vergeten {
     background-color: #fafafa;
     font-family: sans-serif;
     margin: 0 auto;
@@ -90,7 +77,7 @@ label {
     margin-top: 1rem;
 }
 
-input, select {
+input, textarea, select {
     border: 1px solid rgba(0, 0, 0, .08);
     color: #444;
     display: block;
@@ -102,23 +89,26 @@ input, select {
     width: 100%;
 }
 
-input[type=submit] {
+textarea {
+    height: 100px;
+}
+
+input[type=submit], input[type=button] {
     height: auto;
     margin: auto;
     width: 100%;
 }
 
-input[type=submit] {
+input[type=submit], input[type=button] {
     background-color: #fff;
     border: 3px #C73333 solid;
     color: #C73333;
     cursor: pointer;
-    float: right;
     line-height: 1.4rem;
     text-transform: uppercase;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, input[type=button]:hover {
     background-color: #C73333;
     color: #fff;
 }
@@ -166,7 +156,7 @@ input[type=submit]:hover {
     transition: padding 1s, height 1s;
 }
 
-#thankyou {
+#thankyou, #vergeten {
     display: none;
 }
 
@@ -178,7 +168,14 @@ input[type=submit]:hover {
     margin: 1rem 0 3rem 0;
 }
 
-
+#previous {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: none;
+}
 
 @media only screen and (max-width: 420px) {
     header h1 {

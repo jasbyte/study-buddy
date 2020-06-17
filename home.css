@@ -29,6 +29,7 @@ header h1 {
     right: 15px;
     width: 80px;
     height: 30px;
+    float: right;
 }
 
 
@@ -54,6 +55,7 @@ header h1 {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
+    background-color: rgba(217,217,217,0.5);
 }
 
 .flex-container3 {
@@ -82,9 +84,9 @@ header h1 {
     padding-bottom: 25px;
     padding-top: 25px;
 }
- .flex-container3 label{
-     padding-bottom: 15px;
- }
+.flex-container3 label{
+    padding-bottom: 15px;
+}
 
 
 .flex-container2 img {
@@ -161,20 +163,6 @@ header h1 {
     cursor: pointer;
 }
 
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    right: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
 .buttons {
     width: 980px;
     margin-bottom: 80px;
@@ -192,6 +180,15 @@ header h1 {
 #btnhelp {
     margin-right: 10px;
     float: right;
+}
+
+#previous {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: none;
 }
 
 @media only screen and (max-width: 420px) {
@@ -231,6 +228,7 @@ header h1 {
     }
 }
 
+
 @media only screen and (max-width: 850px) {
     html {
         width: min-content;
@@ -249,5 +247,10 @@ header h1 {
     .flex-container2 img {
         width: 90px;
         height: 90px;
+    }
+
+    .buttons {
+        width: 100%;
+        height: 80px;
     }
 }

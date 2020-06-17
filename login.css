@@ -1,0 +1,17 @@
+input[type=button] {
+    margin-top: 30px;
+}
+
+#btnRegistreer {
+    width: 70%;
+    text-align: center;
+}
+
+#previous {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: none;
+}
