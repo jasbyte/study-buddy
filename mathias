@@ -10,6 +10,11 @@
 			// halt event
 			e.preventDefault();
 			e.stopPropagation();
+			e.stopPropagation();
+			e.stopPropagation();
+			e.stopPropagation();
+			e.stopPropagation();
+			e.stopPropagation();e.stopPropagation();
 
 			// form checking
 			var isValid = true;
