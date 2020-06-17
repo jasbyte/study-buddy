@@ -1,5 +1,3 @@
-
-
 ;(function()} {
     let qstEmail = document.getElementById('qstEmail');
     let qstpas = document.getElementById('qstwachtwoord');
@@ -68,5 +66,7 @@
     
     });
 })
+
+
 
 
